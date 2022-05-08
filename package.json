@@ -1,0 +1,27 @@
+{
+  "name": "docxcss",
+  "version": "0.0.0",
+  "description": "Jules Docx's css library",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [
+    "docx",
+    "docx.j",
+    "julesdocx",
+    "docx css"
+  ],
+  "author": "Jules Docx",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-purgecss": "^4.1.3",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julesdocx/docx"
+  }
+}

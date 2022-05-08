@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>StartCSS</title>
+</head>
+
+<body>
+    <nav class="navbar-fixed-blur">
+        <div class="container">
+            <div class="menu">
+                <a class="btn-black hover-rounded mr-1 text-white" href="">Components</a>
+                <a class="btn-outlined-black hover-rounded text-hover-white " href="">Getting started</a>
+                <div class="menu-options">
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Layout system</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Grid system</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Typography</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Top navigation</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Side navigation</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Buttons</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Menu</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">List</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Card</a>
+                    </div>
+                    <div>
+                        <a class="btn-outlined-black  text-hover-white  hover-rounded" href="">Accordion</a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="align-r site-title opacity-50 spacing-s font-bold reverse">StartWithCSS</h2>
+        </div>
+    </nav>
+
+    <div class="pl-1 pr-1 mt-4 grid-12 gap-4">
+        <!-- <div class="span-12x1 grid-4     gap-4">
+            <div>
+                <label for="textinput">label</label>
+                <input type="text" id="textinput" placeholder="hello world">
+            </div>
+            <div>
+                <input class="btn btn-primary hover-rounded text-white" value="Button" type="button">
+            </div>
+            <div>
+                <label for="checkbox_1">check label</label>
+                <input name="checkbox" id="checkbox_1" type="checkbox">
+            </div>
+            <div>   
+                <input type="color">
+            </div>
+            <div>
+                <input type="date">
+            </div>
+            <div>
+                <input type="datetime-local">
+            </div>
+            <div>
+                <input placeholder="email@example.mail" type="email">
+            </div>
+            <div>
+                <input class="btn btn-primary text-white" type="file">
+            </div>
+            <div>
+                <input type="hidden">
+            </div>
+            <div>
+                <input type="image">
+            </div>
+            <div>
+                <input type="month">
+            </div>
+            <div>
+                <input placeholder="0" type="number">
+            </div>
+            <div>
+                <input placeholder="************" type="password">
+            </div>
+            <div>
+                <input name="radiogroup" type="radio">
+                <input name="radiogroup" type="radio">
+                <input name="radiogroup" type="radio">
+            </div>
+            <div>
+                <input type="range">
+            </div>
+            <div>
+                <input class="btn btn-primary text-white" value="Reset" type="reset">
+            </div>
+            <div>
+                <input type="search">  
+            </div>
+            <div>
+                <input class="btn btn-primary text-white" value="Submit" type="submit">
+            </div>
+            <div>
+                <input placeholder="04********" type="tel">  
+            </div>
+            <div>
+                <input placeholder="Write here..." type="text">
+            </div>
+            <div>
+                <input type="time">
+            </div>
+            <div>
+                <input type="url">
+            </div>
+            <div>
+                <input type="week">
+            </div> -->
+        </div>
+        <!-- colors -->
+        <!-- <div class="grid-3">
+            <div class="grid-1">
+                <div class="grid-padding text-white bg-primary">bg primary text</div>
+                <div class="grid-padding text-white bg-secondary">bg secondary text</div>
+                <div class="grid-padding text-white bg-error">bg error text</div>
+                <div class="grid-padding text-white bg-info">bg info text</div>
+            </div>
+            <div class="grid-1">
+                <div class="grid-padding text-white bg-primary-light-1">bg light primary text</div>
+                <div class="grid-padding text-white bg-secondary-light-2">bg light secondary text</div>
+                <div class="grid-padding text-white bg-error-light-3">bg light error text</div>
+                <div class="grid-padding text-white bg-info-light-4">bg light info text</div>
+            </div>
+            <div class="grid-1">
+                <div class="grid-padding text-white bg-primary-dark-1">bg dark primary text</div>
+                <div class="grid-padding text-white bg-secondary-dark-2">bg dark secondary text</div>
+                <div class="grid-padding text-white bg-error-dark-3">bg dark error text</div>
+                <div class="grid-padding text-white bg-info-dark-4">bg dark info text</div>
+            </div>
+        </div>  -->
+
+        <!-- <a href="#" class="text-primary text-hover-secondary-light-1">hover me</a> -->
+
+        <!-- font sizes -->
+        <div class="span-12x1">
+            <h2 class="mb-2 mt-2 font-title">Font Sizes</h2>
+            <div class="grid-2">
+                <div class="grid-padding grid-border display-f content-sb font-8">CAPTION<span
+                        class="align-r font-8">8px</span></div>
+                <div class="grid-padding grid-border display-f content-sb font-12">Small text <span
+                        class="align-r font-8">12px</span></div>
+                <div class="grid-padding grid-border display-f content-sb font-14">Body 2 <span
+                        class="align-r font-8">14px</span></div>
+                <div class="span-1x2 grid-padding grid-border display-f content-sb font-16">Body <span
+                        class="align-r font-8">16px</span></div>
+                <div class="grid-padding grid-border display-f content-sb font-body font-16">button <span
+                        class="align-r font-8">16px</span></div>
+                <div class="grid-padding grid-border display-f content-sb font-body font-18">budy medium <span
+                        class="align-r font-8">18px</span></div>
+                <div class="grid-padding grid-border display-f content-sb font-20">Subheading <span
+                        class="align-r font-8">20px</span>
+                </div>
+                <div class="span-1x1 grid-padding grid-border display-f content-sb font-24">Title <span
+                        class="align-r font-8">24px</span></div>
+                <div class="span-1x1 grid-padding grid-border display-f content-sb font-32">Headline <span
+                        class="align-r font-8">32px</span>
+                </div>
+                <div class="span-1x1 grid-padding grid-border display-f content-sb font-36">Headline 2<span
+                        class="align-r font-8">36px</span>
+                </div>
+                <div class="span-1x1 grid-padding grid-border display-f content-sb font-48">Display-1 <span
+                        class="align-r font-8">48px</span>
+                </div>
+                <div class="span-2x1 grid-padding grid-border display-f content-sb font-60">Display-2 <span
+                        class="align-r font-8">60px</span>
+                </div>
+                <div class="span-2x1 spacing-xs font-bold grid-padding grid-border display-f reverse content-sb font-96">Display-3 <span
+                        class="align-r spacing font-regular font-8">96px</span>
+                </div>
+            </div>
+        </div>
+        <div class="grid-3 span-12x1">
+            <div class="grid-padding grid-border font-thin font-body">thin</div>
+            <div class="grid-padding grid-border font-thin style-italic font-body">thin italic</div>
+            <div class="grid-padding grid-border font-light font-body">light</div>
+            <div class="grid-padding grid-border font-light style-italic font-body">light italic</div>
+            <div class="grid-padding grid-border font-regular font-body">regular</div>
+            <div class="grid-padding grid-border font-medium font-body">medium</div>
+            <div class="grid-padding grid-border font-bold font-body">bold</div>
+            <div class="grid-padding grid-border font-black font-body">black</div>
+        </div>
+        <div class="grid-3 span-12x1">
+            <div class="grid-padding spacing-xs grid-border font-bold font-body">Extra small</div>
+            <div class="grid-padding spacing-s grid-border font-bold font-body">Small</div>
+            <div class="grid-padding spacing-default grid-border font-bold font-body">Default</div>
+            <div class="grid-padding grid-border spacing-l font-bold font-body">Large</div>
+        </div>
+        <div class="grid-3 span-12x1">
+            <div class="grid-padding opacity-10 grid-border font-bold font-body">Opacity10</div>
+            <div class="grid-padding opacity-20 grid-border font-bold font-body">Opacity20</div>
+            <div class="grid-padding opacity-30 grid-border font-bold font-body">Opacity30</div>
+            <div class="grid-padding opacity-40 grid-border font-bold font-body">Opacity40</div>
+            <div class="grid-padding opacity-50 grid-border font-bold font-body">Opacity50</div>
+            <div class="grid-padding opacity-60 grid-border font-bold font-body">Opacity60</div>
+            <div class="grid-padding opacity-70 grid-border font-bold font-body">Opacity70</div>
+            <div class="grid-padding opacity-80 grid-border font-bold font-body">Opacity80</div>
+            <div class="grid-padding opacity-90 grid-border font-bold font-body">Opacity90</div>
+            <div class="grid-padding opacity-100 grid-border font-bold font-body">Opacity100 / default</div>
+        </div>
+
+
+        <!-- 
+        $font-size-body-2: 1rem * 0.875 !default; //14px
+        $font-size-body: 1rem !default; //16px
+        $font-size-subheading: $font-size-body * 1.25 !default; //20px
+        $font-size-title: $font-size-body * 1.5 !default; //24px
+        $font-size-headline: $font-size-body * 2 !default; //32px
+        $font-size-display-1: $font-size-body * 3 !default; //48px
+        $font-size-display-2: $font-size-body * 4 !default; // 60px
+        $font-size-display-3: $font-size-body * 6 !default; // 96px
+        -->
+
+        <!-- buttons -->
+        <div class="span-12x1">
+            <h2 class="mb-2 mt-2 font-title">Buttons</h2>
+            <div class="grid-3 ">
+                <div class="pb-1">
+                    <a href="#" class="btn hover-blur hover-underline text-blue bg-hover-white">Button</a>
+                    <a href="#" class="btn-primary hover-rounded hover-blue text-white ">Button</a>
+                    <a href="#" class="btn-primary hover-white text-white text-hover-blue">Button</a>
+                    <a href="#" class="btn-outlined-primary text-primary text-hover-white">Button</a>
+                    <a href="#" class="btn-underlined-primary text-primary">Button</a>
+                </div>
+                <div class="pb-1">
+                    <a href="#" class="btn hover-blur hover-underline text-secondary bg-hover-white">Button</a>
+                    <a href="#" class="btn-secondary hover-rounded hover-secondary text-white ">Button</a>
+                    <a href="#" class="btn-secondary hover-white text-white text-hover-secondary">Button</a>
+                    <a href="#" class="btn-outlined-secondary text-secondary text-hover-white">Button</a>
+                    <a href="#" class="btn-underlined-secondary text-secondary">Button</a>                
+                </div>
+                <div class="pb-1">
+                    <a href="#" class="btn hover-blur hover-underline text-info bg-hover-white">Button</a>
+                    <a href="#" class="btn-info hover-rounded hover-info text-white ">Button</a>
+                    <a href="#" class="btn-info hover-white text-white text-hover-info">Button</a>
+                    <a href="#" class="btn-outlined-info text-info text-hover-white">Button</a>
+                    <a href="#" class="btn-underlined-info text-info">Button</a>   
+                </div>
+                <div class="pb-1">
+                    <a href="#" class="btn hover-blur hover-underline text-error bg-hover-white">Button</a>
+                    <a href="#" class="btn-error hover-rounded hover-error text-white ">Button</a>
+                    <a href="#" class="btn-error hover-white text-white text-hover-error">Button</a>
+                    <a href="#" class="btn-outlined-error text-error text-hover-white">Button</a>
+                    <a href="#" class="btn-underlined-error text-error">Button</a>  
+                </div>
+                <div class="pb-1">
+                    <a href="#" class="btn hover-blur hover-underline text-black bg-hover-white">Button</a>
+                    <a href="#" class="btn-black hover-rounded hover-black text-white ">Button</a>
+                    <a href="#" class="btn-black hover-white text-white text-hover-black">Button</a>
+                    <a href="#" class="btn-outlined-black text-black text-hover-white">Button</a>
+                    <a href="#" class="btn-underlined-black text-black">Button</a>                  
+                </div>
+            </div>
+        </div>
+
+
+    <!-- cards -->
+    <div class="span-12x1">
+        <h2 class="mb-2 mt-2 font-title">Cards</h2>
+        <div class="grid-3">
+            <div class="grid-padding">
+                <div class="card-outlined mb-2">
+                    <div class="card-header">
+                        <h1 class="card-title">Outlined Card title</h1>
+                        <h6 class="card-subtitle text-grey">subtitle</h6>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                            numquam blanditiis harum quisquam eius sed <a href="#">odit</a> fugiat iusto fuga praesentium
+                            optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+                    </div>
+                    <div class="card-footer align-r">
+                        <div class="card-button ">
+                            <a class="btn-outlined-secondary text-secondary  text-hover-white">Save</a>
+                            <a class="btn-primary text-white">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-padding">
+                <div class="card mb-2">
+                    <div class="card-header">
+                        <h1 class="card-title">Card title</h1>
+                        <h6 class="card-subtitle text-subtitle text-grey">subtitle</h6>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                            numquam blanditiis harum quisquam eius sed <a href="#">odit</a> fugiat iusto fuga praesentium
+                            optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+                    </div>
+                    <div class="card-footer align-l">
+                        <div class="card-button ">
+                            <a class="btn-outlined-secondary text-secondary  text-hover-white">Save</a>
+                            <a class="btn-primary text-white">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="grid-padding">
+                <div class="card-outlined">
+                        <div class="card-header">
+                    <h1 class="card-title">Card with image</h1>
+                        <h6 class="card-subtitle text-grey">subtitle</h6>
+                    </div>
+                    <div class="card-content">
+                          <div id="gullo-art" class="card-image"></div>
+                        <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                            numquam blanditiis harum quisquam eius sed <a href="#">odit</a> fugiat iusto fuga praesentium
+                            optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+                    </div>
+                    <div class="card-footer align-l">
+                        <div class="card-button ">
+                            <a class="btn-outlined-secondary text-secondary  text-hover-white">Save</a>
+                            <a class="btn-primary text-white">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- grid system -->
+    <!-- <h2 class="mb-2 mt-2 font-title">Grid system</h2>
+    <div class="row gap-2 justify-center">
+        <div class="col-12-xs col-5-sm col-3-xl">
+            <div class="card">
+                <h3 class="card-title">Hello World</h3>
+                <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    numquam blanditiis harum quisquam eius sed <a href="#">odit</a> fugiat iusto fuga praesentium
+                    optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+            </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+            <div class="card">
+                <h3 class="card-title">Hello World</h3>
+                <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    numquam blanditiis harum quisquam eius sed <a href="#">odit</a> fugiat iusto fuga praesentium
+                    optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+            </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+            <div class="card">
+                <h3 class="card-title">Hello World</h3>
+                <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    numquam blanditiis harum quisquam eius sed <a href="#">odit</a> fugiat iusto fuga praesentium
+                    optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+            </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+            <div class="card">
+                <h3 class="card-title">Hello World</h3>
+                <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    numquam blanditiis harum quisquam eius sed <a href="#">odit</a> fugiat iusto fuga praesentium
+                    optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="_1x3">Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+        <div>Item 7</div>
+        <div>Item 8</div>
+        <div>Item 9</div>
+    </div> -->
+    </div>
+    <!-- utilities -->
+</body>
+
+</html>
