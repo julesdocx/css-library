@@ -5,15 +5,16 @@ function App() {
     <div className="App">
       <header className="navbar-fixed-blur">
         <div className="container">
+          <p className="font-bold font-36 opacity-40 spacing-s">DemoDocumentation</p>
           <div className="menu-right">
             <a
-              className="btn-blue hover-rounded text-hover-white mr-1"
+              className="btn-blue text-white hover-rounded text-hover-white mr-1"
               href=""
             >
               Getting started
             </a>
             <a
-              className="btn-blue hover-rounded btn-active-blue text-hover-white"
+              className="btn-outlined-blue hover-rounded btn text-blue text-active-outlined-blue text-hover-white" text-blue
               href=""
             >
               Components
@@ -21,7 +22,7 @@ function App() {
             <div className="menu-options">
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   Layout system
@@ -29,7 +30,7 @@ function App() {
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   Grid system
@@ -37,7 +38,7 @@ function App() {
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   Typography
@@ -45,14 +46,14 @@ function App() {
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href="">
                   Top navigation
                 </a>
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   Side navigation
@@ -60,7 +61,7 @@ function App() {
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   Buttons
@@ -68,7 +69,7 @@ function App() {
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   Menu
@@ -76,7 +77,7 @@ function App() {
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   List
@@ -84,7 +85,7 @@ function App() {
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   Card
@@ -92,7 +93,7 @@ function App() {
               </div>
               <div>
                 <a
-                  className="btn-blue  text-hover-white  hover-rounded"
+                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
                   href=""
                 >
                   Accordion
