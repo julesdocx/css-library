@@ -1,0 +1,58 @@
+@use 'sass:math';
+
+%card-layout {
+    display: block;
+    padding: 0;
+    //box-shadow: $base-box-shadow;
+    //border-radius: math.div($base-border-radius, 4);
+    border-radius: $base-border-radius;
+
+    .card-header {
+        padding: $base-padding;
+    }
+
+    .card-title {
+        font-size: $font-size-16;
+
+        font-weight: bold;
+        margin: 0px;
+    }
+    .card-content {
+        padding-bottom: $base-padding;
+    }
+
+    .card-body {
+        font-size: $font-size-16;
+        padding: 0px $base-padding ;
+        a {
+            text-decoration: underline;
+        }
+    }
+    .card-image {
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: $base-padding;
+        //max-height: 300px;
+    }
+
+    .card-footer {
+        padding-bottom: $base-padding;
+    }
+    .card-button {
+        padding: 0px $base-padding;
+    }
+}
+.card {
+    @extend %card-layout;
+}
+
+.card-outlined {
+    @extend %card-layout;
+     border: $base-border-thickness solid #ddd;
+}
+
+// @debug math.div(10, 3);
+// @debug math.$pi;
+// @debug math.floor(2.6);
+// @debug math.max(1px, 20px, 15px, 12px);

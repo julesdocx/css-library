@@ -1,0 +1,80 @@
+%flex-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    //justify-content: space-between;
+    box-sizing: border-box;
+}
+
+%navbar {
+    @extend %flex-layout;
+    border-bottom: 1px solid #ddd;
+    .site-title {
+        font-size: $font-size-32;
+        width: 100%;
+    }
+    .container {
+        @extend %flex-layout;
+    }
+}
+
+.navbar {
+    padding: $base-padding 0;
+    @extend %navbar;
+}
+
+.navbar-small {
+    @extend %navbar;
+    padding: 4px;
+}
+.navbar-fixed-blur {
+    @extend %navbar;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, .90);
+     -webkit-backdrop-filter: blur(20px);
+       backdrop-filter: blur(10px);
+}
+
+
+
+/* TEST */
+
+.nav-circle {
+    transform: translateY(300px);
+    width: 235px;
+    height: 235px;
+    transform-origin: 50% 10px;
+    animation: rotateMenu 40s linear infinite;
+}
+@keyframes rotateMenu {
+    0% {
+        transform:translateY(300px) rotate(0deg);
+    }
+    50% {
+        transform:translateY(300px) rotate(-360deg) ;
+    }
+    100% {
+        transform:translateY(300px) rotate(0deg) ;
+    }
+    
+}
+
+@for $i from 0 through 8 {
+    .nav-circle a:nth-child(#{$i}) {
+        position: absolute;
+        transform: rotate($i* 45deg);
+        transform-origin: 150%;
+    }    
+    .nav-circle a:nth-child(#{$i}):hover {
+        transform: rotate($i* 45deg) translateX(-10px);    
+    }
+}
+
+
+// @each $key, $val in $colors {
+//     .navbar-#{$key} {`
+//         @extend .navbar;
+//         background-color: $val;
+//     }
+// }

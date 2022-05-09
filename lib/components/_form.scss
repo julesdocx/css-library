@@ -1,0 +1,9 @@
+form {
+
+}
+
+input[type]:not([type=checkbox]):not([type=button]):not([type=reset]):not([type=image]):not([type=color]):not([type=submit]):not([type=range]):not([type=file]):not([type=hidden]) {
+    border-radius: 0px;
+    border: $base-border-thickness solid black;
+    padding: 4px;
+}

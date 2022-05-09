@@ -1,0 +1,96 @@
+@use "sass:math";
+
+
+$columns: 12;
+$rows: 12;
+$grid-columns:12;
+$grid-gaps: (
+    "0": 0px,
+    "4": 4px,
+    "6": 6px,
+    "8": 8px,
+    "12": 12px,
+);
+
+$layout-values: flex-start,
+flex-end,
+center,
+space-between,
+space-around;
+
+%grid-base {
+    display: grid;
+    div {
+        box-sizing: border-box;
+        transition: all 0.1s ease;
+    }
+}
+
+
+.container {
+    width: 100%;
+    margin: 0 0px;
+    padding: 0 6px;
+    box-sizing: border-box;
+}   
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// grid gaps
+@each $key,
+$val in $grid-gaps {
+    .gap-#{$key}{
+        grid-gap: $val;
+    }
+}
+
+// justify content Classes
+@each $val in $layout-values {
+    .justify-#{$val} {
+        justify-content: $val;
+    }
+}
+
+$grid-options: 12, 8, 6, 5, 4, 3, 2, 1;
+
+@for $i from 1 through 12 {
+    .grid-#{$i} {
+        @extend %grid-base;
+        grid-template-columns: repeat($i,  minmax(0, 1fr));
+    }
+}
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    font-size: 2vw !important;
+
+    div {
+        margin: 0 0 -1px -1px;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+    }
+}
+
+.grid-border {
+    border: $base-border-thickness solid #ddd;
+}
+.grid-padding {
+    padding: 1rem;
+}
+
+._1x1 {
+    grid-column: auto / span1;
+    grid-row: auto / span1;
+}
+
+@for $i from 1 through $columns {
+    @for $j from 1 through $rows {
+        .span-#{$i}x#{$j} {
+            grid-column: auto / span $i;
+            grid-row: auto / span $j;
+        }
+    }
+}

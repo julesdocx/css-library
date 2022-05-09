@@ -1,0 +1,76 @@
+@mixin btn($bg-color: none) {
+    transition: ease-in-out 0.1s;
+    text-decoration: under;
+    display: inline-block;
+    cursor: pointer;
+    font-size: $font-size-16;
+    font-weight: bold;
+    border-radius: $base-border-radius;
+    padding: $base-padding $base-padding * 1.75;
+    background-color: $bg-color;
+    box-sizing: border-box;
+}
+
+.btn {
+    @include btn;
+}
+
+@each $key, $val in $colors {
+    .btn-#{$key} {
+        @include btn($val);
+        border: 0;
+    }
+    .hover-#{$key} {
+        &:hover {
+            background: $val;
+        }
+    }
+    .btn-outlined-#{$key} {
+        @include btn(#fff);
+        border: $base-border-thickness solid $val;
+        &:hover {
+            background-color: $val
+        }
+    }
+    .btn-underlined-#{$key} {
+        @include btn(#fff);
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+            background-color: #fff;
+        }
+    }
+    .btn-active-outlined-#{$key} {
+        border: $base-border-thickness solid $val;
+        border-radius: $base-border-radius;
+        background-color: $val;
+        color: #fff;
+    }
+    .btn-outlined-#{$key}-rounded {
+        @include btn(#fff);
+        border: $base-border-thickness solid $val;
+        border-radius: 15px;
+        &:hover {
+            background-color: $val
+        }
+    }
+    .btn-complement-#{$key} {
+        @include btn($val);
+        color: light-comp($val);
+        &:hover {
+            color: $val;
+            background-color: light-comp($val);
+        }
+    }
+}
+
+.hover-rounded {
+    &:hover {
+        border-radius: 25px;
+    }
+}
+.hover-underline {
+    &:hover {
+        text-decoration: underline;
+    }
+}

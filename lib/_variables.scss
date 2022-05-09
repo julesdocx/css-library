@@ -1,0 +1,71 @@
+// VARIABLES
+
+// colors
+$primary: #0077FF !default;
+$secondary: rgba(0, 198, 85)!default;
+$error: #FF0000 !default;
+$info: #f6c31c !default;
+
+// color palettes
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "error": $error,
+    "info": $info,
+    "blue": #0077FF,
+    "green": green,
+    "yellow": yellow,
+    "red": red,
+    "grey": #E8E8E8,
+    "black": rgb(1, 1, 1),
+    "white": white,
+    "purple": purple,
+    "blur": rgba(255, 255, 255, 0.3)
+);
+
+// @debug map-get($colors, "purple");
+// @debug map-has-key($colors, "secondary");
+// @debug map-remove($colors, "primary" );
+// @debug map-merge($colors, ("pink": pink));
+
+// spacing
+$base-padding: 0.375rem !default;
+$base-margin: 0.75rem !default;
+
+// borders
+$base-border-thickness: 1px !default;
+$base-border-radius: 4px !default;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
+
+// Typography
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.75rem !default;
+
+$weight-thin: 100 !default;
+$weight-light: 300 !default;
+$weight-regular: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+$weight-black: 900 !default;
+
+// font sizers
+$font-size-8: 1rem * 0.5 !default;      // 8px
+$font-size-12: 1rem * 0.75 !default;    // 12px
+$font-size-14: 1rem * 0.875 !default;   // 14px
+$font-size-16: 1rem !default;           // 16px
+$font-size-18: 1rem * 1.125 !default;   // 18px
+$font-size-20: 1rem * 1.25 !default;    // 20px
+$font-size-24: 1rem * 1.5 !default;     // 24px
+$font-size-32: 1rem * 2 !default;       // 32px
+$font-size-36: 1rem * 2.25 !default;    // 36px
+$font-size-48: 1rem * 3 !default;       // 48px
+$font-size-60: 1rem * 4 !default;       // 60px
+$font-size-96: 1rem * 6 !default;       // 96px
