@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const http = require('http');
+const path = require('path')
 const PORT = process.env.PORT || 5000;
 
 const apiRoutes = require('./lib/routes/api');
@@ -25,11 +26,11 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(express.static(path.join(__dirname, "documentation", "build")))
+app.use(express.static(`${process.cwd()}/documentation/build`));
 
 app.use('/api', apiRoutes);
 app.use("*", async (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"))
+  res.sendFile(`${process.cwd()}/documentation/build/index.html`);
 });
 
 
