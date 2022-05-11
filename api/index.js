@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 app.use(express.static(`${process.cwd()}/documentation/build`));
 
 app.use('/api', apiRoutes);
-app.use("*", async (req, res) => {
+app.use("/", async (req, res) => {
   res.sendFile(`${process.cwd()}/documentation/build/index.html`);
 });
 
