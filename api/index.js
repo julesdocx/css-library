@@ -26,11 +26,12 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(express.static(`${process.cwd()}/documentation/build`));
+app.use(express.static(path.join(__dirname, `../documentation/build`)));
 
 app.use('/api', apiRoutes);
 app.use("*", async (req, res) => {
-  res.sendFile(`${process.cwd()}/documentation/build`);
+  console.log(__dirname, path.join(__dirname, `../documentation/build`));
+  res.sendFile(path.join(__dirname, `../documentation/build`));
 });
 
 
