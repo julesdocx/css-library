@@ -1,110 +1,85 @@
 import './App.css';
+import ReactDOM from "react-dom/client";
+import Nav from './components/Nav';
+import Buttons from './components/library/Buttons';
+import { BrowserRouter, Route, Routes, Navigate, Link } from "react-router-dom";
+import Typography from './components/library/Typography';
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="navbar-fixed-blur">
-        <div className="container">
-          <p className="font-bold font-36 opacity-40 spacing-s">DemoDocumentation</p>
-          <div className="menu-right">
+    <div className="centered-page-lg">
+      <BrowserRouter>
+        <nav className="navbar-small">
+          <div className="container">
             <a
-              className="btn-blue text-white hover-rounded text-hover-white mr-1"
               href=""
+              className="btn-outlined-black hover-rounded text-hover-white active-black mr-1"
             >
-              Getting started
+              Documentation
             </a>
             <a
-              className="btn-outlined-blue hover-rounded btn text-blue text-active-outlined-blue text-hover-white" text-blue
               href=""
+              className="btn-outlined-black hover-rounded text-hover-white"
             >
-              Components
+              Getting Started
             </a>
-            <div className="menu-options">
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  Layout system
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  Grid system
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  Typography
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href="">
-                  Top navigation
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  Side navigation
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  Buttons
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  Menu
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  List
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  Card
-                </a>
-              </div>
-              <div>
-                <a
-                  className="btn-outlined-blue  text-hover-white text-blue  hover-rounded"
-                  href=""
-                >
-                  Accordion
-                </a>
-              </div>
+          </div>
+        </nav>
+        <div className="side-nav-container">
+          <div className="side-nav pr-1">
+            <div className="display-f direction-c mt-2">
+              <Link
+                to="/buttons"
+                className="btn hover-blur hover-underline text-blue bg-hover-white">
+                Buttons
+              </Link>
+              <Link
+                to="/typography"
+                className="btn hover-blur hover-underline text-blue bg-hover-white"
+              >
+                Typography
+              </Link>
+              <a
+                href=""
+                className="btn hover-blur hover-underline text-blue bg-hover-white disabled"
+              >
+                Navigation bar
+              </a>
+              <a
+                href=""
+                className="btn hover-blur hover-underline text-blue bg-hover-white disabled"
+              >
+                Side Navigation
+              </a>
+              <a
+                href=""
+                className="btn hover-blur hover-underline text-blue bg-hover-white disabled"
+              >
+                Forms
+              </a>
+              <a
+                href=""
+                className="btn hover-blur hover-underline text-blue bg-hover-white disabled"
+              >
+                Layout
+              </a>
+              <a
+                href=""
+                className="btn hover-blur hover-underline text-blue bg-hover-white disabled"
+              >
+                Grid
+              </a>
             </div>
           </div>
+          <div className="side-nav-content">
+            <Routes>
+              <Route path="/buttons" element={<Buttons />} />
+              <Route path="/typography" element={<Typography />} />
+            </Routes>
+          </div>
         </div>
-      </header>
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;

@@ -40,12 +40,6 @@
             background-color: #fff;
         }
     }
-    .btn-active-outlined-#{$key} {
-        border: $base-border-thickness solid $val;
-        border-radius: $base-border-radius;
-        background-color: $val;
-        color: #fff;
-    }
     .btn-outlined-#{$key}-rounded {
         @include btn(#fff);
         border: $base-border-thickness solid $val;
@@ -62,6 +56,10 @@
             background-color: light-comp($val);
         }
     }
+    .active-#{$key} {
+        color: white;
+        background-color: $val;
+    }
 }
 
 .hover-rounded {
@@ -72,5 +70,13 @@
 .hover-underline {
     &:hover {
         text-decoration: underline;
+    }
+}
+.disabled {
+    color: rgb(99, 99, 99);
+    //background-color: rgb(223, 223, 223);
+    &:hover {
+        //background-color: rgb(198, 198, 198);
+        text-decoration: none
     }
 }

@@ -1,0 +1,15 @@
+.side-nav-container {
+    @include lg {
+        display: flex;
+    }
+    width: 100%;
+
+    .side-nav {
+        width: 300px;
+        position: sticky;
+        height: auto
+    }
+    .side-nav-content {
+        width: 100%;
+    }
+}

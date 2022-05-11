@@ -156,6 +156,14 @@ $utilities: (
             "c": center,
             "j": justify)
     ),
+    "flex-direction": (
+        "prefix": "direction",
+        "values": (
+            "r": row,
+            "c": column,
+            "cr": column-reverse,
+            "rr": row-reverse)
+    ),
     "justify-content": (
         "prefix": "content",
         "values": (

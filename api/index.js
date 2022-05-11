@@ -26,6 +26,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/api', apiRoutes);
+app.use("/css", apiRoutes);
 
 let server = http.Server(app);
 server.listen(PORT, () => console.log(`API is running on localhost: ${PORT}`));
