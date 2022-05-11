@@ -25,8 +25,14 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(express.static(path.join(__dirname, "documentation", "build")))
+
 app.use('/api', apiRoutes);
-app.use("/css", apiRoutes);
+app.use("*", async (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"))
+});
+
+
 
 let server = http.Server(app);
 server.listen(PORT, () => console.log(`API is running on localhost: ${PORT}`));
