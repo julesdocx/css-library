@@ -20,7 +20,7 @@ export default function App() {
             </a>
             <a
               href=""
-              className="btn-outlined-black hover-rounded text-hover-white"
+              className="btn-outlined-black hover-white disabled"
             >
               Getting Started
             </a>
