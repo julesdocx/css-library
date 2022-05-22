@@ -1,5 +1,5 @@
 $breakpoints: (
-    "xs": 0,
+    "xs": 360px,
     "sm": 480px,
     "md": 720px,
     "lg": 960px,
@@ -38,35 +38,38 @@ $breakpoints: (
     }
 }
 
-// .responsive-test {
-//     @include xs {
-//         color: red;
-//     }
-
-//     @include sm {
-//         color: blue;
-//     }
-
-//     @include md {
-//         color: green;
-//     }
-
-//     @include lg {
-//         color: purple;
-//     }
-
-//     @include xl {
-//         color: orange;
-//     }
-
-//     @include breakpoint(1400px) {
-//         color: pink;
-//     }
-// }
-
 .centered-page-lg {
     margin: auto;
     @include lg {
         max-width: map-get($breakpoints, "lg")
     }
+}
+
+.lg {
+    max-width: map-get($breakpoints, "lg")
+}
+
+.sm-grid {
+    display: flex;
+    @include sm {
+        display: grid;
+    }
+}
+
+.md-grid {
+    display: flex;
+    @include sm {
+        display: grid;
+    }
+}
+
+.lg-grid {
+    display: flex;
+    @include lg {
+        display: grid;
+    }
+}
+
+.flex-g {
+    flex-grow: 4;
 }

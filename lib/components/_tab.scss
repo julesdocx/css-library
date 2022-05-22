@@ -1,0 +1,21 @@
+.tab-group {
+    cursor: pointer;
+    transition: ease-in 0.2s;
+    .tab-item {
+        padding: 6px;
+        border: 0px;
+        font-style: bold;
+        color: map-get($map: $colors, $key: "grey");
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        cursor: pointer;
+        background-color: white;
+        text-align: left;
+        transition: ease-in 0.2s;
+    }
+    .active-tab {
+        color: map-get($map: $colors, $key: "blue");
+        border-bottom: 1px solid map-get($map: $colors, $key: "blue");
+    }
+}

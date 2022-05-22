@@ -1,14 +1,12 @@
 %flex-layout {
     width: 100%;
-    display: flex;
-    align-items: center;
     //justify-content: space-between;
     box-sizing: border-box;
 }
 
 %navbar {
     @extend %flex-layout;
-    border-bottom: 1px solid #ddd;
+    //border-bottom: 1px solid #ddd;
     .site-title {
         font-size: $font-size-32;
         width: 100%;
@@ -16,6 +14,7 @@
     .container {
         @extend %flex-layout;
     }
+    z-index: 2;
 }
 
 .navbar {
@@ -27,14 +26,12 @@
     @extend %navbar;
     padding: 4px;
 }
-.navbar-fixed-blur {
+.navbar-fixed {
     @extend %navbar;
     position: fixed;
     top: 0;
-    background-color: rgba(255, 255, 255, .90);
-     -webkit-backdrop-filter: blur(20px);
-       backdrop-filter: blur(10px);
 }
+
 
 
 

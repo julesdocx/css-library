@@ -7,17 +7,32 @@
         position: absolute;
         display: flex;
         flex-direction: column;
+        transition: all 0.2s ease-in-out;
+        animation: pop-up 0.2s ease-in-out;
         div {
             display: flex;
-            justify-content: flex-end;
+            //justify-content: flex-end;
         }
         div a {
-            justify-content: end;
             position: relative;
             transition: ease 0.2s;
             margin-top: 4px;
-            text-align: right;
+            //text-align: right;
         }
+    }
+}
+
+.menu-options::before {
+    content: '';
+    height: 0px;
+}
+
+@keyframes pop-up {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: auto;
     }
 }
 .menu {
@@ -41,5 +56,38 @@
             margin-top: 4px;
             //text-align: right;
         }
+    }
+}
+
+.dropdown {
+
+   &:hover .dropdown_menu div{
+     display: block;
+   }
+
+}
+
+.dropdown:hover .dropdown_menu{
+    display: block;
+}
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    animation: growDown 200ms ease-in-out forwards;
+    transform-origin: top center;
+    div {
+        margin-top: 4px;
+        display: block;
+        opacity: 1;
+    }
+}
+
+//https://codepen.io/codypearce/pen/PdBXpj?editors=0100
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    100% {
+        transform: scaleY(1)
     }
 }

@@ -10,8 +10,6 @@
 @import 'breakpoints';
 @import 'grid';
 
-// COLORS
-@import 'colors';
 
 // COMPONENTS
 @import 'components/card';
@@ -21,6 +19,9 @@
 @import 'components/menu';
 @import 'components/form';
 @import 'components/sidenav';
+@import 'components/tab';
+
 
 // UTILITIES
+@import 'colors';
 @import 'utilities'

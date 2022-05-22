@@ -1,6 +1,5 @@
 @use "sass:math";
 
-
 $columns: 12;
 $rows: 12;
 $grid-columns:12;
@@ -10,6 +9,10 @@ $grid-gaps: (
     "6": 6px,
     "8": 8px,
     "12": 12px,
+    "18": 18px,
+    "24": 24px,
+    "36": 36px,
+    "42": 42px,
 );
 
 $layout-values: flex-start,
@@ -25,14 +28,6 @@ space-around;
         transition: all 0.1s ease;
     }
 }
-
-
-.container {
-    width: 100%;
-    margin: 0 0px;
-    padding: 0 6px;
-    box-sizing: border-box;
-}   
 
 .row {
     display: flex;
@@ -58,8 +53,11 @@ $grid-options: 12, 8, 6, 5, 4, 3, 2, 1;
 
 @for $i from 1 through 12 {
     .grid-#{$i} {
-        @extend %grid-base;
+        //@extend %grid-base;
         grid-template-columns: repeat($i,  minmax(0, 1fr));
+    }
+    .grid-start-#{$i} {
+        grid-column-start: $i !important;
     }
 }
 .grid-1 {

@@ -3,6 +3,7 @@ import React from "react";
 export default function Typography() {
   return (
     <div className="span-12x1">
+      <h2 class="spacing-sm mt-1 font-48 opacity-50">Typography</h2>
       <div className="span-12x1">
         <h2 className="mb-2 mt-2 font-title">Font Sizes</h2>
         <div className="grid-2">
@@ -53,16 +54,22 @@ export default function Typography() {
         <div className="grid-padding grid-border font-thin style-italic font-body">
           thin italic
         </div>
-        <div className="grid-padding grid-border font-light font-body">light</div>
+        <div className="grid-padding grid-border font-light font-body">
+          light
+        </div>
         <div className="grid-padding grid-border font-light style-italic font-body">
           light italic
         </div>
         <div className="grid-padding grid-border font-regular font-body">
           regular
         </div>
-        <div className="grid-padding grid-border font-medium font-body">medium</div>
+        <div className="grid-padding grid-border font-medium font-body">
+          medium
+        </div>
         <div className="grid-padding grid-border font-bold font-body">bold</div>
-        <div className="grid-padding grid-border font-black font-body">black</div>
+        <div className="grid-padding grid-border font-black font-body">
+          black
+        </div>
       </div>
       <div className="grid-3 span-12x1">
         <div className="grid-padding spacing-xs grid-border font-bold font-body">

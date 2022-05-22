@@ -8,18 +8,283 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>DOCX design</title>
 </head>
-<body>
-    <header class="navbar-small">
-        <div class="display-f ">
-            <div class="grid-2">
-                <h1 class="font-16 m-0">Jules Docx</h1>
-            </div>
+<style>
+    main {
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        transition: all 0.4s ease-in-out;
+        /* &.focus{
+    filter: blur(10px) grayscale(1);
+    opacity: 0.5;
+  } */
+    }
 
-            <div class="grid-2">
-                <a href="" class="m-0">Info</a>
-                <a href="" class="m-0">Menu</a>
+    .item {
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        position: sticky;
+        top: 10px;
+    }
+
+    .fullheight {
+        height: 100vh;
+    }
+
+    .window {
+        /* background-color: #000000; */
+        background-color: #a2d8e2;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        opacity: 0;
+        pointer-events: none;
+
+    }
+
+    .window img {
+        pointer-events: none;
+        object-fit: contain;
+        /* max-width: 80vw;
+    max-height: 80vh; */
+        /* width: auto; */
+        max-height: 90vh;
+        width: 100%;
+        /* max-width: 90vw; */
+        user-select: none;
+        border-radius: 4px !important;
+    }
+    .fixed {
+        position: fixed;
+    }
+</style>
+
+<body>
+    <div class="centered-page-lg">
+        <div class="grid-10">
+            <div class="span-2x1">
+                <div class="item side-nav">
+                    <div class="fixed">
+                                                    <a class="btn-primary hover-white text-white text-hover-blue" href="">Site name</a>
+
+                        <div class="grid-1 align-l">
+                            <a class="mt-1 btn hover-underline text-blue bg-hover-white" href="">Project 1</a>
+                            <a class="btn hover-underline text-blue bg-hover-white" href="">Project 2</a>
+                            <a class="btn hover-underline text-blue bg-hover-white" href="">Project 3</a>
+                            <a class="btn hover-underline text-blue bg-hover-white" href="">Project 4</a>
+                            <a class="btn hover-underline text-blue bg-hover-white" href="">Project 5</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span-8x1">
+                <main>
+
+                    <div class="item">
+                        <img src="/assets/foto_1.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_6.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_12.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_11.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_9.png" style="width:100%">
+                    </div>
+                    <div class="item">
+                        <img src="/assets/foto_1.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_6.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_12.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_11.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_9.png" style="width:100%">
+                    </div>
+                    <div class="item">
+                        <img src="/assets/foto_1.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_6.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_12.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_11.png" style="width:100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/foto_9.png" style="width:100%">
+                    </div>
+                </main>
             </div>
         </div>
-    </header>
+    </div>
 </body>
+
+<script>
+    const main = document.querySelector('main')
+    // start by selecting all images we want to make clickable
+    var imgs = document.querySelectorAll('.item > img');
+    // preselct the "overlay" image
+    var image = document.querySelector('.window img');
+
+    // use a global variable to track the current image dimensions
+    var current = {
+        x: 0,
+        y: 0,
+        w: 0,
+        h: 0,
+    }
+
+    // start the window in closed mode
+    var open = false;
+
+    // loop through images and add an onclick event
+    imgs.forEach(function (img) {
+        img.onclick = (e) => {
+            var target = e.target;
+
+            current.w = target.getBoundingClientRect().width;
+            current.h = target.getBoundingClientRect().height;
+            current.x = target.getBoundingClientRect().left;
+            current.y = target.getBoundingClientRect().top;
+
+            // once we have out dimensions, we can run the "open" function
+            openMe(current.x, current.y, current.w, current.h, target.src)
+        }
+
+        // optional: pre-load images when you hover so there isn't a lag in swapping src
+        img.onmouseover = (e) => {
+            if (open == false) {
+                setTimeout(() => {
+                    image.src = e.target.src
+                    console.log(image.src)
+                }, 500)
+            }
+        }
+    })
+
+
+    const openMe = (x, y, w, h, src) => {
+        //   not sure if this preload works?
+        preloadImage(src)
+        //   set open to true
+        open = true;
+        // add our blur class
+        main.classList.add('focus')
+        // set the dummy image src to the image we clicked on
+        image.src = src;
+
+        // GSAP magic
+        // we pass in the starting values of our image into the "to" section
+        // then in the "from" section, we max out the values.  GSAP automatically tweens
+        var t = gsap.fromTo(".window", {
+            duration: 0.5,
+            x: x + 'px',
+            y: y + 'px',
+            width: w + 'px',
+            height: h + 'px',
+            ease: "power3",
+            paused: true,
+            // padding: '0px',
+            opacity: 1,
+        }, {
+            duration: 0.5,
+            x: 0,
+            y: 0,
+            width: '100%',
+            height: '100%',
+            ease: "power3",
+            // padding: '20px',
+            opacity: 1,
+            pointerEvents: "auto",
+            paused: true,
+        }, );
+
+        //  just to give our image a little time to load, I wrapped the player in a timeout
+        setTimeout(() => {
+            // console.log("PLAYING")
+            t.play();
+        }, 50)
+    }
+
+    // when we click the window, it should close
+    document.querySelector('.window').onclick = () => {
+        closeMe(current.x, current.y, current.w, current.h)
+    }
+
+
+    const closeMe = (x, y, w, h) => {
+        // remove the blur class
+        main.classList.remove('focus')
+        // this GSAP "to" just takes the current values and tweens them back to the original state
+        // when the animation is finished, we call the finished() function
+        var s = gsap.to(".window", {
+            duration: 0.5,
+            x: x + 'px',
+            y: y + 'px',
+            width: w + 'px',
+            height: h + 'px',
+            ease: "power3",
+            // padding: '0px',
+            paused: true,
+            onComplete: finished,
+        });
+
+        s.play();
+    }
+
+    // only runs when closeMe() function completes
+    const finished = () => {
+        // bring opacity down to 0 and make the window object non-clickable with pointer-events: none
+        var o = gsap.to('.window', {
+            opacity: 0,
+            duration: 0.3,
+            // delay: 0.3,
+            pointerEvents: "none",
+            paused: true,
+        })
+        o.play();
+
+        setTimeout(() => {
+            open = false;
+        }, 500)
+    }
+
+    function preloadImage(url) {
+        var img = new Image();
+        img.src = url;
+    }
+</script>
+
 </html>

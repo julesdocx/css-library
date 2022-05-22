@@ -1,6 +1,5 @@
 @mixin btn($bg-color: none) {
     transition: ease-in-out 0.1s;
-    text-decoration: under;
     display: inline-block;
     cursor: pointer;
     font-size: $font-size-16;
@@ -9,6 +8,9 @@
     padding: $base-padding $base-padding * 1.75;
     background-color: $bg-color;
     box-sizing: border-box;
+    line-height: 1.1rem;
+    background-color: white;
+    border: 0px;
 }
 
 .btn {
@@ -28,11 +30,8 @@
     .btn-outlined-#{$key} {
         @include btn(#fff);
         border: $base-border-thickness solid $val;
-        &:hover {
-            background-color: $val
-        }
     }
-    .btn-underlined-#{$key} {
+    .btn-underlined {
         @include btn(#fff);
         text-decoration: underline;
         &:hover {
@@ -44,9 +43,6 @@
         @include btn(#fff);
         border: $base-border-thickness solid $val;
         border-radius: 15px;
-        &:hover {
-            background-color: $val
-        }
     }
     .btn-complement-#{$key} {
         @include btn($val);

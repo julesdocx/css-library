@@ -1,4 +1,7 @@
 @each $key, $val in $colors {
+    .c-#{$key} {
+        color: $val
+    }
     .text-#{$key} {
         color: $val
     }
@@ -9,6 +12,10 @@
     }
     .bg-#{$key} {
         background-color: $val;
+    }
+
+    .border-#{$key} {
+        border: 1px solid $val;
     }
 
     @if($val != black and $val != white) {

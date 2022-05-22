@@ -5,110 +5,185 @@ $utilities: (
         "prefix": "p",
         "values": (
             "0": 0,
-            "1": $base-padding,
-            "2": $base-padding * 2,
-            "3": $base-padding * 4,
-            "4": $base-padding * 6,
-            "5": $base-padding * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "padding-left": (
         "prefix": "pl",
         "values": (
             "0": 0,
-            "1": $base-padding,
-            "2": $base-padding * 2,
-            "3": $base-padding * 4,
-            "4": $base-padding * 6,
-            "5": $base-padding * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "padding-right": (
         "prefix": "pr",
         "values": (
             "0": 0,
-            "1": $base-padding,
-            "2": $base-padding * 2,
-            "3": $base-padding * 4,
-            "4": $base-padding * 6,
-            "5": $base-padding * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "padding-top": (
         "prefix": "pt",
         "values": (
             "0": 0,
-            "1": $base-padding,
-            "2": $base-padding * 2,
-            "3": $base-padding * 4,
-            "4": $base-padding * 6,
-            "5": $base-padding * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "padding-bottom": (
         "prefix": "pb",
         "values": (
             "0": 0,
-            "1": $base-padding,
-            "2": $base-padding * 2,
-            "3": $base-padding * 4,
-            "4": $base-padding * 6,
-            "5": $base-padding * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "margin": (
         "prefix": "m",
         "values": (
+            "a": auto,
             "0": 0,
-            "1": $base-margin,
-            "2": $base-margin * 2,
-            "3": $base-margin * 4,
-            "4": $base-margin * 6,
-            "5": $base-margin * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "margin-left": (
         "prefix": "ml",
         "values": (
+            "a": auto,
             "0": 0,
-            "1": $base-margin,
-            "2": $base-margin * 2,
-            "3": $base-margin * 4,
-            "4": $base-margin * 6,
-            "5": $base-margin * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "margin-right": (
         "prefix": "mr",
         "values": (
+            "a": auto,
             "0": 0,
-            "1": $base-margin,
-            "2": $base-margin * 2,
-            "3": $base-margin * 4,
-            "4": $base-margin * 6,
-            "5": $base-margin * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "margin-top": (
         "prefix": "mt",
         "values": (
+            "a": auto,
             "0": 0,
-            "1": $base-margin,
-            "2": $base-margin * 2,
-            "3": $base-margin * 4,
-            "4": $base-margin * 6,
-            "5": $base-margin * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "margin-bottom": (
         "prefix": "mb",
         "values": (
+            "a": auto,
             "0": 0,
-            "1": $base-margin,
-            "2": $base-margin * 2,
-            "3": $base-margin * 4,
-            "4": $base-margin * 6,
-            "5": $base-margin * 8
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "8": 8px,
+            "12": 12px,
+            "14": 14px,
+            "16": 16px,
+            "18": 18px,
+            "24": 24px,
+            "36": 36px,
+            "48": 48px,
+            "60": 60px,
         ),
     ),
     "opacity": (
@@ -127,14 +202,36 @@ $utilities: (
             "default": 1
         ),
     ),
+    "position": (
+        "prefix": "pos",
+        "values": (
+            "s": sticky,
+            "f": fixed,
+            "a": absolute,
+            "r": relative,
+            "st": static,
+        )
+    ),
+    "color": (
+        "prefix": "c",
+        "values": (
+            "default": bl,
+            "none": 0,
+            "xs": 2px,
+            "sm": 4px,
+            "lg": 10px,
+            "full": 50%,
+        )
+    ),
     "border-radius": (
-        "prefix": "br",
+        "prefix": "brd",
         "values": (
             "default": $base-border-radius,
             "none": 0,
-            "xs": math.div($base-border-radius, 4),
-            "sm": math.div($base-border-radius, 2),
-            "lg": $base-border-radius * 2,
+            "xs": 2px,
+            "sm": 4px,
+            "lg": 10px,
+            "xl": 50%,
             "full": 50%,
         )
     ),
@@ -144,8 +241,18 @@ $utilities: (
             "n": none,
             "b": block,
             "f": flex,
+            "g": grid,
             "i": inline,
             "i-b": inline-block)
+    ),
+    "overflow": (
+        "prefix": "ov",
+        "values": (
+            "v": visible,
+            "h": hidden,
+            "s": scroll,
+            "a": auto,
+        )
     ),
     "text-align": (
         "prefix": "align",
@@ -165,7 +272,7 @@ $utilities: (
             "rr": row-reverse)
     ),
     "justify-content": (
-        "prefix": "content",
+        "prefix": "justify-c",
         "values": (
             "s": start,
             "l": left,
@@ -178,7 +285,7 @@ $utilities: (
             "sa": space-around)
     ),
     "justify-items": (
-        "prefix": "items",
+        "prefix": "justify-i",
         "values": (
             "s": start,
             "l": left,
@@ -189,6 +296,58 @@ $utilities: (
             "se": space-evenly,
             "st": stretch,
             "sa": space-around)
+    ),
+    "align-items": (
+        "prefix": "align-i",
+        "values": (
+            "s": start,
+            "e": end,
+            "r": right,
+            "c": center,
+            "b": baseline,
+            "st": stretch,)
+    ),
+    "align-self": (
+        "prefix": "align-s",
+        "values": (
+            "s": start,
+            "e": end,
+            "r": right,
+            "c": center,
+            "b": baseline,
+            "st": stretch,)
+    ),
+     "border-bottom": (
+        "prefix": "bb",
+        "values": (
+            "b": 1px solid map-get($colors, "black"),
+            "g": 1px solid map-get($colors, "grey"),
+            "f": 2px solid map-get($colors, "black"),
+        )
+    ),
+    "border-top": (
+        "prefix": "bt",
+        "values": (
+            "b": 1px solid map-get($colors, "black"),
+            "g": 1px solid map-get($colors, "grey"),
+            "f": 2px solid map-get($colors, "black"),
+        )
+    ),
+    "border-right": (
+        "prefix": "br",
+        "values": (
+            "b": 1px solid map-get($colors, "black"),
+            "g": 1px solid map-get($colors, "grey"),
+            "f": 2px solid map-get($colors, "black"),
+        )
+    ),
+    "border-left": (
+        "prefix": "bl",
+        "values": (
+            "b": 1px solid map-get($colors, "black"),
+            "g": 1px solid map-get($colors, "grey"),
+            "f": 2px solid map-get($colors, "black"),
+        )
     ),
     "font-size": (
         "prefix": "font",
@@ -231,11 +390,11 @@ $utilities: (
         "prefix": "spacing",
         "values": (
             "xs": -0.25rem,
-            "s": -0.125rem,
-            "m": 0rem,
+            "sm": -0.125rem,
+            "md": 0rem,
             "default": 0rem,
             "normal": 0rem,
-            "l": 0.25rem,
+            "lg": 0.25rem,
         )
     ),
     "font-style": (
