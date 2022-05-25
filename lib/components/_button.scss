@@ -39,6 +39,14 @@
             background-color: #fff;
         }
     }
+    .hover-outline-#{$key} {
+         &:hover {
+             border: $base-border-thickness solid $val;
+         }
+    }
+    .active-outline-#{$key} {
+        border: $base-border-thickness solid $val !important;
+    }
     .btn-outlined-#{$key}-rounded {
         @include btn(#fff);
         border: $base-border-thickness solid $val;
@@ -68,6 +76,7 @@
         text-decoration: underline;
     }
 }
+
 .disabled {
     color: rgb(99, 99, 99);
     //background-color: rgb(223, 223, 223);

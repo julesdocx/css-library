@@ -15,7 +15,7 @@
         transition: ease-in 0.2s;
     }
     .active-tab {
-        color: map-get($map: $colors, $key: "blue");
-        border-bottom: 1px solid map-get($map: $colors, $key: "blue");
+        color: map-get($map: $colors, $key: "green");
+        border-bottom: 1px solid map-get($map: $colors, $key: "green");
     }
 }

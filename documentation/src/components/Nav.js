@@ -50,7 +50,7 @@ const navigate = useNavigate();
               : "span-2x1"
           } hover-underline`}
         >
-          Begun CSS
+          Begone CSS
         </Link>
         <div
           onClick={() => {

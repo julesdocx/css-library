@@ -5,8 +5,7 @@ export default function Typography() {
     <div className="span-12x1">
       <h2 class="spacing-sm mt-1 font-48 opacity-50">Typography</h2>
       <div className="span-12x1">
-        <h2 className="mb-2 mt-2 font-title">Font Sizes</h2>
-        <div className="grid-2">
+        <div className="grid-2 mt-16">
           <div className="grid-padding grid-border display-f content-sb font-8">
             CAPTION<span className="align-r font-8">8px</span>
           </div>
