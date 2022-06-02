@@ -38,10 +38,10 @@
 /* TEST */
 
 .nav-circle {
-    transform: translateY(300px);
+    //transform: translateY(300px);
     width: 235px;
-    height: 235px;
-    transform-origin: 50% 10px;
+   // height: 235px;
+   // transform-origin: 50% 10px;
     animation: rotateMenu 40s linear infinite;
 }
 @keyframes rotateMenu {

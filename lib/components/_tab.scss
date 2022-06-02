@@ -14,8 +14,13 @@
         text-align: left;
         transition: ease-in 0.2s;
     }
+    .tab-item:hover:not(.active-tab) {
+        border-bottom: 1px solid map-get($map: $colors, $key: "grey");
+        transition: ease-in 0.1s;
+
+    }
     .active-tab {
-        color: map-get($map: $colors, $key: "green");
-        border-bottom: 1px solid map-get($map: $colors, $key: "green");
+        color: map-get($map: $colors, $key: "blue");
+        border-bottom: 1px solid map-get($map: $colors, $key: "blue");
     }
 }

@@ -1,0 +1,31 @@
+.accordeon {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    transition: all ease-in 0.2s;
+    .accordeon-item {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        padding: 6px;
+        border-bottom: 1px solid map-get($map: $colors, $key: "grey");
+        &:hover {
+            .title {
+                font-weight: bold;
+            }
+        }
+    }
+    .description, .aside {
+        color: map-get($map: $colors, $key: "grey");
+    }
+    .content {
+        padding: 6px;
+        display: none;
+    }
+    .active {
+        border: 0px;
+        .title {
+            font-weight: bold;
+        }
+    }
+}
