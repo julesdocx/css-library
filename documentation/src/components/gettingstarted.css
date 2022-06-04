@@ -1,0 +1,76 @@
+.gs-accordeon {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    transition: all ease-in 0.2s;
+}
+
+.gs-step {
+    align-items: center;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 16px;
+    padding: 16px !important;
+    justify-content: space-between;
+    border: 1px solid;
+    margin-top: 6px;
+    border-radius: 4px;
+}
+
+.gs-step:hover > .step-title {
+    text-decoration: underline;
+}
+
+.gs-step-image {
+    width: 50px;
+    margin-right: 12px;
+}
+
+.step-title {
+    align-items: center;
+}
+
+.description {
+    text-align: left;
+}
+
+.gs-step:hover > .step-arrow {
+    transform: translateX(0px);
+    width: 16px;
+}
+
+
+.step-arrow {
+    width: 0px;
+    transform: translateX(-16px);
+    transition: all ease-in 0.1s;
+}
+
+button {
+    background-color: white;
+    border: 0px;
+}
+
+.vscode-step {
+    color: #1572B0;
+}
+
+#html-step {
+    color: #DC6A11;
+}
+
+#styles-step {
+    color: #1484D0;
+}
+
+#live-step {
+    color: #7B1FA2;
+}
+
+#github-step {
+    color: black;
+}
+
+#netlify-step {
+    color: #25C7B7;
+}

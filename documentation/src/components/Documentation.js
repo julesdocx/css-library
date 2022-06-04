@@ -1,12 +1,29 @@
-import React, { useState } from "react";
+import { gsap } from "gsap";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
-function Documentation() {
+const Documentation = () => {
 const [docState, setDocState] = useState(0);
+
+let menu = useRef(null);
+let outlet = useRef(null);
+
+useEffect(() => {
+  gsap.to(
+    menu,
+    0.5,
+    {
+      delay: 0.4,
+      opacity: 0,
+      ease: "power3.out",
+      x: -100,
+    },
+  );
+})
 
   return (
     <div className="grid-10 md-grid mt-60">
-      <div className="span-2x1 side-nav">
+      <div className="span-2x1 side-nav" ref={menu}>
         <div className="display-f direction-c">
           <Link
             onClick={() => setDocState(0)}
@@ -66,7 +83,7 @@ const [docState, setDocState] = useState(0);
           </Link>
         </div>
       </div>
-      <div className="span-8x1 side-nav-content grid-start-3">
+      <div className="span-8x1 side-nav-content grid-start-3" ref={outlet}>
         <Outlet />
       </div>
     </div>

@@ -51,6 +51,7 @@ $breakpoints: (
 
 .sm-grid {
     display: flex;
+    flex-direction: column;
     @include sm {
         display: grid;
     }
@@ -58,6 +59,7 @@ $breakpoints: (
 
 .md-grid {
     display: flex;
+    flex-direction: column;
     @include sm {
         display: grid;
     }
@@ -65,6 +67,7 @@ $breakpoints: (
 
 .lg-grid {
     display: flex;
+    flex-direction: column;
     @include lg {
         display: grid;
     }
