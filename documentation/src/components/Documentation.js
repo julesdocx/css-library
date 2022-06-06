@@ -5,21 +5,8 @@ import { Link, Outlet } from "react-router-dom";
 const Documentation = () => {
 const [docState, setDocState] = useState(0);
 
-let menu = useRef(null);
-let outlet = useRef(null);
-
-useEffect(() => {
-  gsap.to(
-    menu,
-    0.5,
-    {
-      delay: 0.4,
-      opacity: 0,
-      ease: "power3.out",
-      x: -100,
-    },
-  );
-})
+let menu = useRef();
+let outlet = useRef();
 
   return (
     <div className="grid-10 md-grid mt-60">

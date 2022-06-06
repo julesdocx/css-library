@@ -1,10 +1,24 @@
-import React from "react";
+import { gsap } from "gsap";
+import React, { useEffect, useRef } from "react";
 import { Link, Outlet } from "react-router-dom";
 
-function Home() {
+const Home = () => {
+
+const title = useRef();
+
+useEffect(() => {
+  gsap.from(".title", {
+    duration: 0.8,
+    delay: 0.4,
+    opacity: 0,
+    ease: "power3.out",
+    x: 100,
+  });
+});
+
   return (
     <div className="span-12x1">
-      <h1 className="font-96 opacity-50 spacing-sm">Begone CSS</h1>
+      <h1 className="font-96 opacity-50 spacing-sm title">Begone CSS</h1>
       <div className="display-f direction-c align-i-s">
       <Link
         to="/gettingstarted"

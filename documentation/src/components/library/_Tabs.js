@@ -7,7 +7,7 @@ const [tabState1, setTabState1] = useState(0)
     <div className="span-12x1">
       <h1 className="font-96 opacity-50 spacing-sm">Tabs</h1>
       <div className="span-2x1 mt-24 code-block">
-        <div class="grid-5 md-grid mb-2 gap-6 tab-group pt-1">
+        <div className="grid-5 md-grid mb-2 gap-6 tab-group pt-1">
           <button
             onClick={() => setTabState1(0)}
             className={`tab-item ${

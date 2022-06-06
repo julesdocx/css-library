@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Nav() {
-const [tabState1, setTabState1] = useState(0);
+//const [isActive, setTabState1] = useState(0);
 const navigate = useNavigate();
 
  const [isShrunk, setShrunk] = useState(false);
@@ -41,70 +41,61 @@ const navigate = useNavigate();
       } navbar-fixed bg-white lg`}
     >
       <div className="grid-10 lg-grid align-i-s tab-group">
-        <Link
-          onClick={() => setTabState1(0)}
+        <NavLink
           to="/"
-          className={`tab-item ${
-            tabState1 === 0
-              ? "span-6x1 font-bold active-tab flex-g"
-              : "span-2x1"
-          } hover-underline`}
+          className={({ isActive }) =>
+            (isActive
+              ? "active span-6x1 font-bold active-tab flex-g"
+              : "span-2x1")
+          }
         >
           Begone CSS
-        </Link>
-        <div
-          onClick={() => {
-            setTabState1(2);
-            navigate("/documentation");
-          }}
-          className={`tab-item ${
-            tabState1 === 2
-              ? "span-6x1 active-tab font-bold flex-g"
-              : "span-2x1"
-          } hover-underline dropdown`}
+        </NavLink>
+        <NavLink
+          to="/documentation"
+          className={({ isActive }) =>
+            (isActive
+              ? " span-6x1 font-bold active-tab flex-g"
+              : "span-2x1")
+          }
         >
-          <Link
-            onClick={() => setTabState1(2)}
-            to="/documentation"
-            className="dropdown_button hover-underline"
-          >
-            Documentation
-          </Link>
-          <div className="dropdown_menu dropdown_menu-6">
-            <div>
-              <Link
-                onClick={() => setTabState1(2)}
-                to="/documentation/typography"
-                className="btn-outlined-black text-black hover-rounded"
-              >
-                Typography
-              </Link>
-            </div>
-            <div>
-              <Link
-                onClick={() => setTabState1(2)}
-                to="/documentation/buttons"
-                className="btn-outlined-black text-black hover-rounded"
-              >
-                Buttons
-              </Link>
-            </div>
-          </div>
-        </div>
-        <Link
-          onClick={() => setTabState1(1)}
+          Documentation
+        </NavLink>
+        <NavLink
           to="/gettingstarted"
-          className={`tab-item ${
-            tabState1 === 1
+          className={({ isActive }) =>
+            (isActive
               ? "span-6x1 font-bold active-tab flex-g"
-              : "span-2x1"
-          } hover-underline`}
+              : "span-2x1")
+          }
         >
           Getting started
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
 }
 
 export default Nav;
+
+        // <div className="dropdown_menu dropdown_menu-6">
+        //     <div>
+        //       <NavLink
+        //         onClick={() => setisActive(2)}
+        //         to="/documentation/typography"
+        //         className="btn-outlined-black text-black hover-rounded"
+        //       >
+        //         Typography
+        //       </NavLink>
+        //     </div>
+        //     <div>
+        //       <NavLink
+        //         onClick={() => setisActive(2)}
+        //         to="/documentation/buttons"
+        //         className="btn-outlined-black text-black hover-rounded"
+        //       >
+        //         Buttons
+        //       </NavLink>
+        //     </div>
+        //   </div>
+        // </div>

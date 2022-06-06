@@ -3,7 +3,7 @@ import React from "react";
 export default function Typography() {
   return (
     <div className="span-12x1">
-      <h2 class="spacing-sm mt-1 font-48 opacity-50">Typography</h2>
+      <h2 className="spacing-sm mt-1 font-48 opacity-50">Typography</h2>
       <div className="span-12x1">
         <div className="grid-2 mt-16">
           <div className="grid-padding grid-border display-f content-sb font-8">

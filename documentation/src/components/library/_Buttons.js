@@ -13,64 +13,64 @@ const [tabState1, setTabState1] = useState(0);
 const [tabState2, setTabState2] = useState(0);
 
 
-const copyText_1 = `<a href="#" class="btn hover-underline text-blue">
+const copyText_1 = `<a href="#" className="btn hover-underline text-blue">
  Link
 </a>`;
-const copyText_2 = `<button class="btn hover-underline text-blue">
+const copyText_2 = `<button className="btn hover-underline text-blue">
   Button
 </button>`;
-const copyText_3 = `<input type="submit" class="btn hover-underline text-blue"></input>`;
-const copyText_4 = `<input type="reset" class="btn hover-underline text-blue"></input>`;
+const copyText_3 = `<input type="submit" className="btn hover-underline text-blue"></input>`;
+const copyText_4 = `<input type="reset" className="btn hover-underline text-blue"></input>`;
 
-const copyText_5 = `<button class="btn hover-underline text-green mb-6 mr-6">
+const copyText_5 = `<button className="btn hover-underline text-green mb-6 mr-6">
   Button
 </button>
-<button class="btn-secondary bg-green hover-rounded hover-green text-white mb-6 mr-6">
+<button className="btn-secondary bg-green hover-rounded hover-green text-white mb-6 mr-6">
   Button
 </button>
-<button class="btn-green bg-green hover-white text-white text-hover-green mb-6 mr-6">
+<button className="btn-green bg-green hover-white text-white text-hover-green mb-6 mr-6">
   Button
 </button>
-<button class="btn-outlined-green text-green text-hover-white hover-green mb-6 mr-6">
+<button className="btn-outlined-green text-green text-hover-white hover-green mb-6 mr-6">
   Button
 </button>
-<button class="btn-underlined text-green mb-6 mr-6">
+<button className="btn-underlined text-green mb-6 mr-6">
   Button
 </button>`;
-const copyText_6 = `<button class="btn hover-underline text-yellow mb-6 mr-6">
+const copyText_6 = `<button className="btn hover-underline text-yellow mb-6 mr-6">
   Button
 </button>
-<button class="btn-secondary bg-yellow hover-rounded hover-yellow text-white mb-6 mr-6">
+<button className="btn-secondary bg-yellow hover-rounded hover-yellow text-white mb-6 mr-6">
   Button
 </button>
-<button class="btn-yellow bg-yellow hover-white text-white text-hover-yellow mb-6 mr-6">
+<button className="btn-yellow bg-yellow hover-white text-white text-hover-yellow mb-6 mr-6">
   Button
 </button>
-<button class="btn-outlined-yellow text-yellow text-hover-white hover-yellow mb-6 mr-6">
+<button className="btn-outlined-yellow text-yellow text-hover-white hover-yellow mb-6 mr-6">
   Button
 </button>
-<button class="btn-underlined text-yellow mb-6 mr-6">
+<button className="btn-underlined text-yellow mb-6 mr-6">
   Button
 </button>`;
-const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
+const copyText_7 = `<button className="btn hover-underline text-red mb-6 mr-6">
   Button
 </button>
-<button class="btn-secondary bg-red hover-rounded hover-red text-white mb-6 mr-6">
+<button className="btn-secondary bg-red hover-rounded hover-red text-white mb-6 mr-6">
   Button
 </button>
-<button class="btn-red bg-red hover-white text-white text-hover-red mb-6 mr-6">
+<button className="btn-red bg-red hover-white text-white text-hover-red mb-6 mr-6">
   Button
 </button>
-<button class="btn-outlined text-red text-hover-white hover-red mb-6 mr-6">
+<button className="btn-outlined text-red text-hover-white hover-red mb-6 mr-6">
   Button
 </button>
-<button class="btn-underlined text-red mb-6 mr-6">
+<button className="btn-underlined text-red mb-6 mr-6">
   Button
 </button>`;
 
   return (
     <div className="span-12x1">
-      {/* <div class="grid-3 mb-2 gap-6 tab-group pt-1">
+      {/* <div className="grid-3 mb-2 gap-6 tab-group pt-1">
         <a href="" className="active-tab tab-item font-14 hover-underline">
           Development
         </a>
@@ -82,7 +82,7 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
         </a>
       </div> */}
       <h2 className="font-30 c-grey">Button</h2>
-      <div class="p-2 c-grey code-description grid-2 md-grid">
+      <div className="p-2 c-grey code-description grid-2 md-grid">
         <div>
           A button is an&nbsp;
           <ul>
@@ -134,7 +134,7 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
         </div>
       </div>
       <div className="span-2x1 mt-24 code-block">
-        <div class="grid-5 md-grid mb-2 gap-6 tab-group pt-1">
+        <div className="grid-5 md-grid mb-2 gap-6 tab-group pt-1">
           <button
             onClick={() => setTabState1(0)}
             className={`tab-item ${
@@ -192,7 +192,7 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
           </div>
         </div>
         <SyntaxHighlighter
-          class="brd-sm"
+          className="brd-sm"
           id="button"
           language="html"
           style={vscDarkPlus}
@@ -224,7 +224,7 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
       ></div>
       <h2 className="font-30 mt-24 c-grey">Button colors &amp; hovers</h2>
       <div className="span-2x1 code-block">
-        <div class="p-2 c-grey code-description">
+        <div className="p-2 c-grey code-description">
           Buttons can be colored &nbsp;
           <ul>
             <li>
@@ -270,7 +270,7 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
           </span>
           &nbsp;class
         </div>
-        <div class="grid-4 md-grid mb-2 gap-6 tab-group pt-1">
+        <div className="grid-4 md-grid mb-2 gap-6 tab-group pt-1">
           <button
             onClick={() => setTabState2(0)}
             className={`tab-item ${

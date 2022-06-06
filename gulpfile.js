@@ -11,7 +11,7 @@ const buildStyles = () => {
         .pipe(sass())
         .pipe(cleanCSS({ compatibility: "ie8" }))
         //.pipe(purgecss({ content: ['*.html'] }))
-        .pipe(dest("css"))
+      .pipe(dest("css"))
     );
 }
 
