@@ -1,0 +1,19 @@
+.title-img {
+    margin-left: 100px;
+    opacity: 0;
+    width: 55%;
+}
+
+.lazy-img {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 250px
+}
+
+.description {
+    margin-left: 100px;
+    opacity: 0;
+}
