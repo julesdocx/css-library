@@ -1,3 +1,26 @@
+.banner {
+    width: 50%;
+}
+
+.subtitle {
+    position: relative;
+    top: -85px;
+    left: -30px;
+}
+
+.step-list p {
+    cursor: pointer;
+    position: relative;
+    top: -30px;
+    display: block;
+    font-weight: 600;
+    margin-right: 6px;
+    text-align: center;
+}
+.step-list p:hover {
+    font-weight: 800;
+}
+
 .gs-accordeon {
     display: flex;
     width: 100%;
@@ -9,7 +32,7 @@
     align-items: center;
     cursor: pointer;
     display: grid;
-    grid-template-columns: 1fr 1fr 16px;
+    grid-template-columns: 1fr 16px;
     padding: 16px !important;
     justify-content: space-between;
     border: 1px solid;
@@ -18,7 +41,7 @@
 }
 
 .gs-step:hover > .step-title {
-    text-decoration: underline;
+
 }
 
 .gs-step-image {
@@ -51,26 +74,30 @@ button {
     border: 0px;
 }
 
-.vscode-step {
+.vscode-step  {
+    color: #1572B0;
+}
+.vscode-step  {
     color: #1572B0;
 }
 
-#html-step {
+
+.html-step {
     color: #DC6A11;
 }
 
-#styles-step {
+.styles-step {
     color: #1484D0;
 }
 
-#live-step {
+.live-step {
     color: #7B1FA2;
 }
 
-#github-step {
+.github-step {
     color: black;
 }
 
-#netlify-step {
+.netlify-step {
     color: #25C7B7;
 }
