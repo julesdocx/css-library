@@ -215,12 +215,17 @@ $utilities: (
     "color": (
         "prefix": "c",
         "values": (
-            "default": bl,
-            "none": 0,
-            "xs": 2px,
-            "sm": 4px,
-            "lg": 10px,
-            "full": 50%,
+            "default": map-get($colors, "black"),
+            "transparant": transparent,
+            "blue":  map-get($colors, "blue"),
+            "red":  map-get($colors, "red"),
+            "green":  map-get($colors, "green"),
+            "grey":  map-get($colors, "grey"),
+            "black":  map-get($colors, "black"),
+            "light-grey":  map-get($colors, "light-grey"),
+            "white":  map-get($colors, "white"),
+            "purple":  map-get($colors, "purple"),
+            "blur":  map-get($colors, "blur"),
         )
     ),
     "border-radius": (
@@ -228,11 +233,12 @@ $utilities: (
         "values": (
             "default": $base-border-radius,
             "none": 0,
-            "xs": 2px,
-            "sm": 4px,
-            "lg": 15px,
-            "xl": 20px,
-            "xxl": 50%,
+            "2": 2px,
+            "4": 4px,
+            "6": 6px,
+            "12": 12px,
+            "16": 16px,
+            "50": 50%,
             "full": 50%,
         )
     ),
@@ -390,12 +396,12 @@ $utilities: (
     "letter-spacing": (
         "prefix": "spacing",
         "values": (
-            "xs": -0.25rem,
-            "sm": -0.125rem,
-            "md": 0rem,
+            "-025": -0.25rem,
+            "-0125": -0.125rem,
+            "0": 0rem,
             "default": 0rem,
             "normal": 0rem,
-            "lg": 0.25rem,
+            "025": 0.25rem,
         )
     ),
     "font-style": (

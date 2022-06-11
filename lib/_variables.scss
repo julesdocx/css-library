@@ -19,7 +19,7 @@ $colors: ("primary": $primary,
     "light-grey": #ebebeb,
     "black": rgb(20, 20, 20),
     "white": white,
-    "purple": purple,
+    "purple": rgb(138, 34, 138),
     "blur": rgba(255, 255, 255, 0.3));
 
 // @debug map-get($colors, "purple");
@@ -50,8 +50,7 @@ $size-7: 0.75rem !default;
 $weight-thin: 100 !default;
 $weight-light: 300 !default;
 $weight-regular: 400 !default;
-$weight-medium: 500 !default;
-$weight-semibold: 600 !default;
+$weight-medium: 600 !default;
 $weight-bold: 700 !default;
 $weight-black: 900 !default;
 
