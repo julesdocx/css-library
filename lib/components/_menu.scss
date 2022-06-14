@@ -60,17 +60,15 @@
 }
 
 .dropdown {
-
-   &:hover .dropdown_menu div{
+   &:hover + .dropdown_menu{
      display: block;
    }
-
 }
 
-.dropdown:hover .dropdown_menu{
+.dropdown:hover .dropdown_menu {
     display: block;
 }
-.dropdown_menu{
+.dropdown_menu {
     display: none;
     position: absolute;
     animation: growDown 200ms ease-in-out forwards;

@@ -327,33 +327,33 @@ $utilities: (
      "border-bottom": (
         "prefix": "bb",
         "values": (
-            "b": 1px solid map-get($colors, "black"),
-            "g": 1px solid map-get($colors, "grey"),
-            "f": 2px solid map-get($colors, "black"),
+            "black": 1px solid map-get($colors, "black"),
+            "grey": 1px solid map-get($colors, "grey"),
+            "thick": 2px solid map-get($colors, "black"),
         )
     ),
     "border-top": (
         "prefix": "bt",
         "values": (
-            "b": 1px solid map-get($colors, "black"),
-            "g": 1px solid map-get($colors, "grey"),
-            "f": 2px solid map-get($colors, "black"),
+            "black": 1px solid map-get($colors, "black"),
+            "grey": 1px solid map-get($colors, "grey"),
+            "thick": 2px solid map-get($colors, "black"),
         )
     ),
     "border-right": (
         "prefix": "br",
         "values": (
-            "b": 1px solid map-get($colors, "black"),
-            "g": 1px solid map-get($colors, "grey"),
-            "f": 2px solid map-get($colors, "black"),
+            "black": 1px solid map-get($colors, "black"),
+            "grey": 1px solid map-get($colors, "grey"),
+            "thick": 2px solid map-get($colors, "black"),
         )
     ),
     "border-left": (
         "prefix": "bl",
         "values": (
-            "b": 1px solid map-get($colors, "black"),
-            "g": 1px solid map-get($colors, "grey"),
-            "f": 2px solid map-get($colors, "black"),
+            "black": 1px solid map-get($colors, "black"),
+            "grey": 1px solid map-get($colors, "grey"),
+            "thick": 2px solid map-get($colors, "black"),
         )
     ),
     "font-size": (
@@ -448,4 +448,8 @@ $utilities: (
     -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
     -o-transform: matrix(-1, 0, 0, 1, 0, 0);
     transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.text-underline {
+    text-decoration: underline;
 }

@@ -6,17 +6,13 @@
     .accordeon-item {
         cursor: pointer;
         display: grid;
-        grid-template-columns: 1fr 1fr auto;
+        grid-template-columns: 1fr 1fr;
         padding: 6px;
         border-bottom: 1px solid map-get($map: $colors, $key: "grey");
-        &:hover {
-            .title {
-                font-weight: bold;
-            }
+        .description {
+            display: flex;
+            justify-content: space-between;
         }
-    }
-    .description, .aside {
-        color: map-get($map: $colors, $key: "grey");
     }
     .content {
         padding: 6px;
