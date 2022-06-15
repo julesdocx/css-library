@@ -6,10 +6,9 @@
     font-weight: bold;
     border-radius: $base-border-radius;
     padding: $base-padding $base-padding * 1.75;
-    background-color: $bg-color;
+    background-color: transparent;
     box-sizing: border-box;
     line-height: 1.1rem;
-    background-color: white;
     border: 0px;
 }
 
@@ -30,14 +29,6 @@
     .btn-outlined-#{$key} {
         @include btn(#fff);
         border: $base-border-thickness solid $val;
-    }
-    .btn-underlined {
-        @include btn(#fff);
-        text-decoration: underline;
-        &:hover {
-            text-decoration: none;
-            background-color: #fff;
-        }
     }
     .hover-outline-#{$key} {
          &:hover {
@@ -66,6 +57,14 @@
     }
 }
 
+.btn-underlined {
+        @include btn(#fff);
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+ }
+
 .hover-rounded {
     &:hover {
         border-radius: 25px;
@@ -84,4 +83,8 @@
         //background-color: rgb(198, 198, 198);
         text-decoration: none
     }
+}
+
+.cursor {
+    cursor: pointer;
 }

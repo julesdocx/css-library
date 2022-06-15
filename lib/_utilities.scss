@@ -324,6 +324,16 @@ $utilities: (
             "b": baseline,
             "st": stretch,)
     ),
+     "border": (
+        "prefix": "br",
+        "values": (
+            "black": 1px solid map-get($colors, "black"),
+            "grey": 1px solid map-get($colors, "grey"),
+            "thick": 2px solid map-get($colors, "black"),
+            "white": 2px solid map-get($colors, "white"),
+
+        )
+    ),
      "border-bottom": (
         "prefix": "bb",
         "values": (
@@ -354,6 +364,15 @@ $utilities: (
             "black": 1px solid map-get($colors, "black"),
             "grey": 1px solid map-get($colors, "grey"),
             "thick": 2px solid map-get($colors, "black"),
+        )
+    ),
+     "transition": (
+        "prefix": "tr",
+        "values": (
+            "04": ease 0.4s,
+            "03": ease 0.3s,
+            "02": ease 0.2s,
+            "01": ease 0.1s,
         )
     ),
     "font-size": (

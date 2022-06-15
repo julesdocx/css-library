@@ -6,13 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/zvz4jqr.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+        <link rel="stylesheet" href="http://localhost:5000/api/css/v0/">
+
     <title>Begonecss</title>
 </head>
+<style>
+    * {
+        font-family: neue-haas-grotesk-display, sans-serif;
+        transition: 0.2s ease;
+    }
 
+    .content {
+        border-top: 1px solid grey;
+    }
+</style>
 <body>
     <div class="grid-12 lg-grid mb-60">
-        <nav class="nav-bar mt-4 p-4 mb-4 span-6x1 grid-start-4 display-f justify-c-sb">
+        <nav class="nav-bar mt-4 p-4 mb-4 span-8x1 grid-start-3 display-f justify-c-sb">
             <div class="site-title font-32 font-medium">
                 My CSS achitecture
             </div>
@@ -20,7 +31,7 @@
                 ******
             </div>
         </nav>
-        <div class="accordeon span-6x1 grid-start-4">
+        <div class="accordeon span-8x1 grid-start-3">
             <a class="accordeon-item hover-light-grey" id="0">
                 <div class="title">
                     Utility Classes
@@ -167,10 +178,83 @@
                         maximum grid rows
                     </h5>
                     <p>♾</p>
-                    <!-- <h5 class="text-grey">
-                        maximum grid rows
+                    <h5 class="text-grey">
+                        grid-4
                     </h5>
-                    <p>♾</p> -->
+                    <div class="md-grid grid-4">
+                        <div class="bg-grey"></div>
+                        <div class="bg-blue"></div>
+                        <div class="bg-grey"></div>
+                        <div class="bg-blue"></div>
+                        <div class="bg-blue"></div>
+                        <div class="bg-grey"></div>
+                        <div class="bg-blue"></div>
+                        <div class="bg-grey"></div>
+                    </div>
+                    <h5 class="text-grey">
+                       grid-6
+                   </h5>
+                   <div class="md-grid grid-6">
+                       <div class="bg-grey"></div>
+                       <div class="bg-blue"></div>
+                       <div class="bg-grey"></div>
+                       <div class="bg-blue"></div>
+                       <div class="bg-grey"></div>
+                       <div class="bg-blue"></div>
+                       <div class="bg-blue"></div>
+                       <div class="bg-grey"></div>
+                       <div class="bg-blue"></div>
+                       <div class="bg-grey"></div>
+                       <div class="bg-blue"></div>
+                       <div class="bg-grey"></div>
+                   </div>
+                    <h5 class="text-grey">
+                        gap-12
+                    </h5>
+                    <div class="md-grid grid-4 gap-6">
+                        <div class="bg-grey"></div>
+                        <div class="bg-blue"></div>
+                        <div class="bg-grey"></div>
+                        <div class="bg-blue"></div>
+                        
+                    </div>
+                     <h5 class="text-grey">
+                        span-1x2
+                    </h5>
+                    <div class="md-grid grid-4">
+                        <div class="bg-grey">.</div>
+                        <div class="bg-red span-1x2">span-1x2</div>
+                        <div class="bg-grey">.</div>
+                        <div class="bg-blue">.</div>
+                        <div class="bg-blue">.</div>
+                        <div class="bg-grey">.</div>
+                        <div class="bg-blue ">span-1x2</div>
+                    </div>
+                    <h5 class="text-grey">
+                        span-2x2
+                    </h5>
+                    <div class="md-grid grid-4">
+                        <div class="bg-grey">.</div>
+                        <div class="bg-red span-2x2">span-2x2</div>
+                        <div class="bg-grey">.</div>
+                        <div class="bg-blue">.</div>
+                        <div class="bg-blue">.</div>
+                    </div>
+                    <h5 class="text-grey">
+                        span-4x1
+                    </h5>
+                    <div class="md-grid grid-4">
+                        <div class="bg-red span-4x1">span-4x1</div>
+                        <div class="bg-grey">.</div>
+                        <div class="bg-blue">.</div>
+                        <div class="bg-grey">.</div>
+                        <div class="bg-blue">.</div>
+                        <div class="bg-blue">.</div>
+                        <div class="bg-grey">.</div>
+                        <div class="bg-blue">.</div>
+                        <div class="bg-grey">.</div>
+                    </div>
+                    
                 </div>
             </div>
             <a class="accordeon-item hover-light-grey" id="2">
@@ -185,83 +269,79 @@
                 </div>
             </a>
             <div class="content">
-                <div class="grid-12 md-grid gap-24 direction-c mt-24">
+                <div class="grid-12 md-grid gap-24 direction-c">
                     <div class="grid-2 md-grid span-12x1">
                         <div class="display-f direction-c">
-                            <div class="grid-padding grid-border display-f justify-c-sb font-8">CAPTION
+                            <div class="grid-padding grid-border display-f justify-c-sb font-8">font-8
                                 <span class="align-r font-8">8px
                                 </span>
                             </div>
-                            <div class="grid-padding grid-border display-f justify-c-sb font-12">Small text 
+                            <div class="grid-padding grid-border display-f justify-c-sb font-12">font-12
                                 <span class="align-r font-8">12px
                                 </span>
                             </div>
-                            <div class="grid-padding grid-border display-f justify-c-sb font-14">Body 2 
+                            <div class="grid-padding grid-border display-f justify-c-sb font-14">font-14
                                 <span class="align-r font-8">14px
                                 </span>
                             </div>
-                            <div class=" grid-padding grid-border display-f justify-c-sb font-16">Body 
+                            <div class=" grid-padding grid-border display-f justify-c-sb font-16">font-16
                                 <span class="align-r font-8">16px
                                 </span>
                             </div>
-                            <div class="grid-padding grid-border display-f justify-c-sb font-body font-16">button 
-                                <span class="align-r font-8">16px
-                                </span>
-                            </div>
-                            <div class="grid-padding grid-border display-f justify-c-sb font-body font-18">budy medium 
+                            <div class="grid-padding grid-border display-f justify-c-sb font-body font-18">font-18
                                 <span class="align-r font-8">18px
                                 </span>
                             </div>
-                            <div class="grid-padding grid-border display-f justify-c-sb font-20">Subheading 
+                            <div class="grid-padding grid-border display-f justify-c-sb font-20">font-20 
                                     <span class="align-r font-8">20px
                                 </span>
                             </div>
-                            <div class="span-1x1 grid-padding grid-border display-f justify-c-sb font-24">Title 
+                            <div class="span-1x1 grid-padding grid-border display-f justify-c-sb font-24">font-24 
                                 <span class="align-r font-8">24px
                                 </span>
                             </div>
-                            <div class="span-1x1 grid-padding grid-border display-f justify-c-sb font-32">Headline 
+                            <div class="span-1x1 grid-padding grid-border display-f justify-c-sb font-32">font-32 
                                 <span class="align-r font-8">32px
                                 </span>
                             
                             </div>
-                            <div class="span-1x1 grid-padding grid-border display-f justify-c-sb font-36">Headline 2
+                            <div class="span-1x1 grid-padding grid-border display-f justify-c-sb font-36">font-36
                                 <span class="align-r font-8">36px
                                 </span>
                             
                             </div>
-                            <div class="span-1x1 grid-padding grid-border display-f justify-c-sb font-48">Display-1 
+                            <div class="span-1x1 grid-padding grid-border display-f justify-c-sb font-48">font-48 
                                 <span class="align-r font-8">48px
                                 </span>
                             
                             </div>
-                            <div class="span-2x1 grid-padding grid-border display-f justify-c-sb font-60">Display-2 
+                            <div class="span-2x1 grid-padding grid-border display-f justify-c-sb font-60">font-60
                                 <span class="align-r font-8">60px
                                 </span>
                             
                             </div>
                         </div>
                         <div class="display-f direction-c">
-                            <div class="span-2x1 grid-padding grid-border display-f font-bold justify-c-sb font-60">Bold 
-                                <span class="align-r font-8">font-bold
+                            <div class="span-2x1 grid-padding display-f font-bold justify-c-sb font-60">font-bold 
+                                <span class="align-r font-8">Bold
                                 </span>
                             </div>
-                            <div class="span-2x1 grid-padding grid-border display-f style-italic justify-c-sb font-60">Italic 
-                                <span class="align-r font-8">style-italic
+                            <div class="span-2x1 grid-padding display-f style-italic justify-c-sb font-60">style-italic 
+                                <span class="align-r font-8">italic
                                 </span>
                             </div>
-                            <div class="span-2x1 grid-padding grid-border display-f text-underline justify-c-sb font-60">Underline 
-                                <span class="align-r font-8">text-italic
+                            <div class="span-2x1 grid-padding display-f text-underline justify-c-sb font-60">text-underline 
+                                <span class="align-r font-8">underline
                                 </span>
                             </div>
-                            <div class="span-2x1 grid-padding grid-border display-f spacing--025 justify-c-sb font-60">-0.25 Spacing 
+                            <div class="span-2x1 grid-padding display-f spacing--025 justify-c-sb font-60">spacing--025 
                                 <span class="align-r font-8">
-                                     spacing--025
+                                     -0.25 Spacing
                                 </span>
                             </div>
                     </div>
                         <div class="span-2x1 spacing-xs grid-padding grid-border display-f justify-c-sb font-96">
-                            Display-3 
+                            font-96 
                             <span class="align-r spacing font-regular font-8">96px</span>
                         </div>
                     </div>
@@ -279,27 +359,46 @@
                 </div>
             </a>
             <div class="content">
-                <div class="md-grid grid-2 gap-4">
+                <div class="md-grid grid-2 gap-6">
                     <h5 class="text-grey">
-                        display: grid, until 720px
+                       Design system
                     </h5>
-                    <p>md-grid</p>
+                    <p>
+                        Een verzameling van regels, principes en modules, met als doel zowel het ontwerp als de ontwerpfase  efficiënter, duidelijker en schaalbaar te maken.
+                    </p>
                     <h5 class="text-grey">
-                        display: grid, until 960px
+                    Wat moet ik weten vooraleer ik begin aan het definiëren van een ontwerpsysteem, gericht naar een gebruikersomgeving of in het Engels  een UI, User Interface?                    
                     </h5>
-                    <p>lg-grid</p>
+                    <p>
+                        Het begint bij de organisatie van ruimte (of spatiëring), grid en layout, regels en grenzen van het ontwerp. Met opgestelde regels rond ruimtes, grids en layouts, zorg je voor ritme orde en uiteindelijk een snellere ontwerpfase. Een efficiëntere ontwerpfase waarbij we minder moeten nadenken en sneller beslissingen nemen.
+                    </p>
                     <h5 class="text-grey">
-                        maximum grid columns
+                       Hoe definieer ik mijn spatiëring of in het Engels, spacial system?
                     </h5>
-                    <p>12</p>
-                    <h5 class="text-grey">
-                        maximum grid rows
+                    <p>
+                        Concreet, kun je beginnen met basiseenheden. Afmetingen die later in relatie met het grid en layout zullen bouwen aan een moderne User Interfase. Afmetingen en spatiëring definiëren, ik herhaal, om de aantal keuzes tijdens het ontwerp te verminderen. Een voorbeeld is het 8pt grid patroon, een increment van 8 als basis eenheden.
+                    </p>
+                    <h5>
+
                     </h5>
-                    <p>♾</p>
-                    <!-- <h5 class="text-grey">
-                        maximum grid rows
-                    </h5>
-                    <p>♾</p> -->
+                    <p>Concreet, kun je beginnen met basiseenheden. Afmetingen die later in relatie met het grid en layout zullen bouwen aan een moderne User Interfase. Afmetingen en spatiëring definiëren, ik herhaal, om de aantal keuzes tijdens het ontwerp te verminderen. Een voorbeeld is het 8pt grid patroon, een increment van 8 als basis eenheden.</p>
+                    <div width="100%" class="span-2x1">
+                        <img src="./assets/spacing.png" alt="spacing">
+                    </div>
+                    <h5></h5>
+                    <p>
+                        Consistentie in ruimte & afmetingen zorgen voor voorspelbaarheid en ritme. Een egaal ontwerp, met vertrouwbaarheid en geloofwaardigheid als gevolg. Daarnaast dienen deze eenheden ook bij hergebruik, ontwerpen in groepen en of het overdragen naar nieuwe ontwerpers.
+                    </p>
+                    <h5></h5>
+                    <div width="100%" class="span-2x1">
+                        <img src="./assets/spacing_guide.png" alt="spacing">
+                    </div>
+                    <h5></h5>
+                    <p>Concreet kun je dus kiezen uit de veel voorkomende basis eenheden, een increment van: 4, 5, 6, 8 of 10.  Maar vooraleer je een basis eenheid kiest moet je natuurlijk eens kijken naar de gebruiker zijn noden, in het Engels user needs.</p>
+                    <h5></h5>
+                    <p class="mb-48">
+                        Bij kleine basis eenheden, 4, 5 of 6 bijvoorbeeld, kun je soms moeilijk het verschil zien tussen twee verschillende eenheden. Eenheden zoals 8 of 10 minder variabel zijn.
+                    </p>
                 </div>
             </div>
             <a class="accordeon-item hover-light-grey" id="1">
@@ -364,7 +463,7 @@
                             <button class="btn-outlined-blue text-blue text-hover-white hover-blue">action2</button>
                         </div>
                     </nav>
-                    <h5 class="text-grey">
+                    <!-- <h5 class="text-grey">
                         Dropdown menu
                     </h5>
                     <div>
@@ -382,7 +481,7 @@
                             <div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <h5 class="text-grey">
                         Menu
                     </h5>
@@ -465,16 +564,6 @@
                         </div>
                     </div>
 </body>
-<style>
-    * {
-        font-family: 'times new roman', neue-haas-grotesk-display, sans-serif;
-        transition: 0.2s ease;
-    }
-
-    .content {
-        border-top: 1px solid grey;
-    }
-</style>
 <script>
     var imageUrls = ["./assets/foto_1.png", "./assets/foto_2.png", "./assets/foto_3.png", "./assets/foto_4.png",
         "./assets/foto_5.png", "./assets/foto_6.png", "./assets/foto_7.png", "./assets/foto_8.png",

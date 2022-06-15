@@ -13,58 +13,58 @@ const [tabState1, setTabState1] = useState(0);
 const [tabState2, setTabState2] = useState(0);
 
 
-const copyText_1 = `<a href="#" className="btn hover-underline text-blue">
+const copyText_1 = `<a href="#" class="btn hover-underline text-blue">
  Link
 </a>`;
-const copyText_2 = `<button className="btn hover-underline text-blue">
+const copyText_2 = `<button class="btn hover-underline text-blue">
   Button
 </button>`;
-const copyText_3 = `<input type="submit" className="btn hover-underline text-blue"></input>`;
-const copyText_4 = `<input type="reset" className="btn hover-underline text-blue"></input>`;
+const copyText_3 = `<input type="submit" class="btn hover-underline text-blue"></input>`;
+const copyText_4 = `<input type="reset" class="btn hover-underline text-blue"></input>`;
 
-const copyText_5 = `<button className="btn hover-underline text-green mb-6 mr-6">
+const copyText_5 = `<button class="btn hover-underline text-green mb-6 mr-6">
   Button
 </button>
-<button className="btn-secondary bg-green hover-rounded hover-green text-white mb-6 mr-6">
+<button class="btn-secondary bg-green hover-rounded hover-green text-white mb-6 mr-6">
   Button
 </button>
-<button className="btn-green bg-green hover-white text-white text-hover-green mb-6 mr-6">
+<button class="btn-green bg-green hover-white text-white text-hover-green mb-6 mr-6">
   Button
 </button>
-<button className="btn-outlined-green text-green text-hover-white hover-green mb-6 mr-6">
+<button class="btn-outlined-green text-green text-hover-white hover-green mb-6 mr-6">
   Button
 </button>
-<button className="btn-underlined text-green mb-6 mr-6">
+<button class="btn-underlined text-green mb-6 mr-6">
   Button
 </button>`;
-const copyText_6 = `<button className="btn hover-underline text-yellow mb-6 mr-6">
+const copyText_6 = `<button class="btn hover-underline text-yellow mb-6 mr-6">
   Button
 </button>
-<button className="btn-secondary bg-yellow hover-rounded hover-yellow text-white mb-6 mr-6">
+<button class="btn-secondary bg-yellow hover-rounded hover-yellow text-white mb-6 mr-6">
   Button
 </button>
-<button className="btn-yellow bg-yellow hover-white text-white text-hover-yellow mb-6 mr-6">
+<button class="btn-yellow bg-yellow hover-white text-white text-hover-yellow mb-6 mr-6">
   Button
 </button>
-<button className="btn-outlined-yellow text-yellow text-hover-white hover-yellow mb-6 mr-6">
+<button class="btn-outlined-yellow text-yellow text-hover-white hover-yellow mb-6 mr-6">
   Button
 </button>
-<button className="btn-underlined text-yellow mb-6 mr-6">
+<button class="btn-underlined text-yellow mb-6 mr-6">
   Button
 </button>`;
-const copyText_7 = `<button className="btn hover-underline text-red mb-6 mr-6">
+const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
   Button
 </button>
-<button className="btn-secondary bg-red hover-rounded hover-red text-white mb-6 mr-6">
+<button class="btn-secondary bg-red hover-rounded hover-red text-white mb-6 mr-6">
   Button
 </button>
-<button className="btn-red bg-red hover-white text-white text-hover-red mb-6 mr-6">
+<button class="btn-red bg-red hover-white text-white text-hover-red mb-6 mr-6">
   Button
 </button>
-<button className="btn-outlined text-red text-hover-white hover-red mb-6 mr-6">
+<button class="btn-outlined text-red text-hover-white hover-red mb-6 mr-6">
   Button
 </button>
-<button className="btn-underlined text-red mb-6 mr-6">
+<button class="btn-underlined text-red mb-6 mr-6">
   Button
 </button>`;
 
@@ -88,7 +88,7 @@ const copyText_7 = `<button className="btn hover-underline text-red mb-6 mr-6">
           <ul>
             <li>
               <span>
-                <code>{`<a><a/>`}</code>
+                <code>{`<a></a>*`}</code>
               </span>
               ,&nbsp;
             </li>
@@ -229,7 +229,7 @@ const copyText_7 = `<button className="btn hover-underline text-red mb-6 mr-6">
           <ul>
             <li>
               <span>
-                <code>{`<a><a/>`}</code>
+                <code>{`<a></a> :)`}</code>
               </span>
               ,&nbsp;
             </li>

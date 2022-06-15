@@ -73,14 +73,14 @@ const navigate = useNavigate();
           Getting started
         </NavLink>
         <NavLink
-          to="/gettingstarted"
+          to="/templates"
           className={({ isActive }) =>
             isActive
               ? "span-2x1 active-tab flex-g pt-4 mt-24 navlink font-bold"
               : "span-2x1 font-bold text-grey pt-4 mt-24 navlink"
           }
         >
-          Darkmode
+          Templates
         </NavLink>
       </div>
     </nav>

@@ -6,215 +6,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/zvz4jqr.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="stylesheet" href="http://localhost:5000/api/css/v0/">
+
     <title>DOCX design</title>
 </head>
 <style>
     * {
         font-family: neue-haas-grotesk-display, sans-serif;
     }
-    main {
-        max-width: 800px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 10px;
-        transition: all 0.4s ease-in-out;
-        /* &.focus{
-    filter: blur(10px) grayscale(1);
-    opacity: 0.5;
-  } */
-    }
-
-    .item {
-        height: 100%;
-    }
-
-    img {
-        width: 100%;
-        position: sticky;
-        top: 10px;
-    }
-
-    .fullheight {
-        height: 100vh;
-    }
-
-    .window {
-        /* background-color: #000000; */
-        background-color: #a2d8e2;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        opacity: 0;
-        pointer-events: none;
-
-    }
-
-    .window img {
-        pointer-events: none;
-        object-fit: contain;
-        /* max-width: 80vw;
-    max-height: 80vh; */
-        /* width: auto; */
-        max-height: 90vh;
-        width: 100%;
-        /* max-width: 90vw; */
-        user-select: none;
-        border-radius: 4px !important;
-    }
-    .fixed {
-        position: fixed;
-    }
 </style>
 
 <body>
-    <div class="centered-page-lg">
-        <div class="grid-12 md-grid">
-            <div>
-                
+    <div class="grid-12 lg-grid mb-60">
+        <div class="grid-start-4 span-6x1">
+            <nav class="nav-bar mb-4  display-f justify-c-sb">
+                <div class="site-title font-24 font-medium bg-blue text-white p-6 pt-24">
+                    My first blog
+                </div>
+                <div class="aside display-f align-i-e">
+                    <button class="btn-underlined text-blue">Contact</button>
+                    <button class="btn bg-blue text-white hover-rounded ml-18">Nieuwsbrief</button>
+                </div>
+            </nav>
+            <div class="grid-12 md-grid mt-36">
+                <div class="span-12x1 bg-black cursor c-white p-12 tr-04 brr-4 pt-36 pb-36 br br-black hover-outlined text-hover-black hover-outline-black hover-white hover-underline">
+                    <p>
+                         Latest article
+                    </p>
+                    <p class="font-96 font-bold">
+                        <!-- <span class="4display-b">The</span> -->
+                        The Value of Aesthetics
+                    </p>
+                </div>
             </div>
+            <div>
+                <div class="grid-4 mt-36 md-grid tab-group">
+                    <a class="tab-item font-medium active-tab">
+                        Popular
+                    </a>
+                    <a class="tab-item font-medium">
+                        Latest
+                    <a class="tab-item font-medium">
+                        Development
+                    </a>
+                    <a class="tab-item font-medium">
+                        Design
+                    </a>
+                </div>
+            </div>
+            <div class="grid-6 lg-grid gap-36 mt-24">
+                <div class=" span-4x1 bg-black c-white br-black hover-underline hover-outlined-black text-hover-black tr-04 brr-4 hover-white cursor">
+                   <p class="font-48 font-medium">
+                        Nightlife branding, 2022
+                   </p>
+                </div>
+                <div class="span-2x1">
+                    Gloom Club, my next challenge in nightlife branding.
+                    What does it take to brand the nightlife of today?
+                    <div class="display-f align-i-e justify-c-sb">
+                        <button class="btn-underlined text-blue mt-12">Read</button>
+                        <p class="c-grey">April 12 2022</p>
+                    </div>
+                </div>
+                <div class="span-2x1">
+                    What is the best preparation for the work environment as a junior web-developer?
+                    A guided bootcamp or following online courses?
+                    <div class="display-f align-i-e justify-c-sb">
+                        <button class="btn-underlined text-blue mt-12">Read</button>
+                        <p class="c-grey">Januari 27 2022</p>
+                    </div>                </div>
+                <div class=" span-4x1 bg-black c-white br-black hover-outlined-black hover-underline text-hover-black hover-white tr-04 brr-4 cursor">
+                   <p class="font-48 font-medium">
+                        Junior web-development
+                   </p>
+                </div>
+                <div class=" span-4x1 bg-black c-white br-black hover-outlined-black hover-underline tr-04 brr-4 text-hover-black hover-white cursor">
+                   <p class="font-48 font-medium">
+                        Coding music brought new sound
+                   </p>
+                </div>
+                <div class="span-2x1 ">
+                    Coding music brings a whole new world and experience of sound.
+                    Wannes dewit guides us through the process.
+                    <div class="display-f align-i-e justify-c-sb">
+                        <button class="btn-underlined text-blue mt-12">Read</button>
+                        <p class="c-grey">March 17 2022</p>
+                    </div>
+                </div>
+           </div>
         </div>
     </div>
 </body>
 
 <script>
-    const main = document.querySelector('main')
-    // start by selecting all images we want to make clickable
-    var imgs = document.querySelectorAll('.item > img');
-    // preselct the "overlay" image
-    var image = document.querySelector('.window img');
 
-    // use a global variable to track the current image dimensions
-    var current = {
-        x: 0,
-        y: 0,
-        w: 0,
-        h: 0,
-    }
-
-    // start the window in closed mode
-    var open = false;
-
-    // loop through images and add an onclick event
-    imgs.forEach(function (img) {
-        img.onclick = (e) => {
-            var target = e.target;
-
-            current.w = target.getBoundingClientRect().width;
-            current.h = target.getBoundingClientRect().height;
-            current.x = target.getBoundingClientRect().left;
-            current.y = target.getBoundingClientRect().top;
-
-            // once we have out dimensions, we can run the "open" function
-            openMe(current.x, current.y, current.w, current.h, target.src)
-        }
-
-        // optional: pre-load images when you hover so there isn't a lag in swapping src
-        img.onmouseover = (e) => {
-            if (open == false) {
-                setTimeout(() => {
-                    image.src = e.target.src
-                    console.log(image.src)
-                }, 500)
-            }
-        }
-    })
-
-
-    const openMe = (x, y, w, h, src) => {
-        //   not sure if this preload works?
-        preloadImage(src)
-        //   set open to true
-        open = true;
-        // add our blur class
-        main.classList.add('focus')
-        // set the dummy image src to the image we clicked on
-        image.src = src;
-
-        // GSAP magic
-        // we pass in the starting values of our image into the "to" section
-        // then in the "from" section, we max out the values.  GSAP automatically tweens
-        var t = gsap.fromTo(".window", {
-            duration: 0.5,
-            x: x + 'px',
-            y: y + 'px',
-            width: w + 'px',
-            height: h + 'px',
-            ease: "power3",
-            paused: true,
-            // padding: '0px',
-            opacity: 1,
-        }, {
-            duration: 0.5,
-            x: 0,
-            y: 0,
-            width: '100%',
-            height: '100%',
-            ease: "power3",
-            // padding: '20px',
-            opacity: 1,
-            pointerEvents: "auto",
-            paused: true,
-        }, );
-
-        //  just to give our image a little time to load, I wrapped the player in a timeout
-        setTimeout(() => {
-            // console.log("PLAYING")
-            t.play();
-        }, 50)
-    }
-
-    // when we click the window, it should close
-    document.querySelector('.window').onclick = () => {
-        closeMe(current.x, current.y, current.w, current.h)
-    }
-
-
-    const closeMe = (x, y, w, h) => {
-        // remove the blur class
-        main.classList.remove('focus')
-        // this GSAP "to" just takes the current values and tweens them back to the original state
-        // when the animation is finished, we call the finished() function
-        var s = gsap.to(".window", {
-            duration: 0.5,
-            x: x + 'px',
-            y: y + 'px',
-            width: w + 'px',
-            height: h + 'px',
-            ease: "power3",
-            // padding: '0px',
-            paused: true,
-            onComplete: finished,
-        });
-
-        s.play();
-    }
-
-    // only runs when closeMe() function completes
-    const finished = () => {
-        // bring opacity down to 0 and make the window object non-clickable with pointer-events: none
-        var o = gsap.to('.window', {
-            opacity: 0,
-            duration: 0.3,
-            // delay: 0.3,
-            pointerEvents: "none",
-            paused: true,
-        })
-        o.play();
-
-        setTimeout(() => {
-            open = false;
-        }, 500)
-    }
-
-    function preloadImage(url) {
-        var img = new Image();
-        img.src = url;
-    }
 </script>
 
 </html>

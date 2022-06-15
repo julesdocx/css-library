@@ -30,10 +30,15 @@ app.use(express.static(path.join(__dirname, `../documentation/build`)));
 
 app.use('/api', apiRoutes);
 app.use("*", async (req, res) => {
-  console.log(__dirname, path.join(__dirname, `../documentation/build`));
+ // console.log(__dirname, path.join(__dirname, `../documentation/build`));
   res.sendFile(path.join(__dirname, `../documentation/build`));
 });
 
+app.use("/templates/:id", async (req, res) => {
+  const id = req.params.id;
+  console.log(__dirname, path.join(__dirname, `./template_${id}.html`));
+  res.sendFile(path.join(__dirname, `../template_${id}.html`));
+});
 
 
 let server = http.Server(app);
