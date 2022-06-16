@@ -17,3 +17,15 @@
     margin-left: 100px;
     opacity: 0;
 }
+
+/* p {
+    line-height: 1.25em;
+    letter-spacing: -0.1rem;
+} */
+
+h1 {
+    line-height: 1em;
+    letter-spacing: -0.25rem;
+    margin-bottom: 0;
+}
+

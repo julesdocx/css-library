@@ -39,15 +39,15 @@ const navigate = useNavigate();
     <nav
       className={`${
         isShrunk ? "shrunkNav" : "main-nav"
-      } navbar-fixed bg-white lg`}
+      } navbar-fixed lg`}
     >
-      <div className="grid-8 lg-grid align-i-s tab-group">
+      <div className="grid-8 md-grid align-i-s tab-group">
         <NavLink
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "span-2x1 font-bold active-tab pt-4 mt-24 navlink flex-g"
-              : "span-2x1 font-bold text-grey pt-4 mt-24 navlink"
+              ? "active span-2x1 font-bold p-4 text-white bg-black pt-18 navlink flex-g"
+              : "font-bold span-2x1 p-4 text-black  pt-18 navlink"
           }
         >
           Begone CSS
@@ -56,8 +56,8 @@ const navigate = useNavigate();
           to="/documentation"
           className={({ isActive }) =>
             isActive
-              ? " span-2x1 active-tab flex-g pt-4 mt-24 navlink font-bold"
-              : "span-2x1 font-bold text-grey pt-4 mt-24 navlink"
+              ? "active span-2x1 bg-black text-white flex-g pt-18 navlink font-bold p-4"
+              : "font-bold span-2x1 p-4 text-black  pt-18 navlink"
           }
         >
           Components
@@ -66,8 +66,8 @@ const navigate = useNavigate();
           to="/gettingstarted"
           className={({ isActive }) =>
             isActive
-              ? "span-2x1 active-tab flex-g pt-4 mt-24 navlink font-bold"
-              : "span-2x1 font-bold text-grey pt-4 mt-24 navlink"
+              ? "active span-2x1 bg-black text-white flex-g pt-18 navlink font-bold p-4"
+              : "font-bold span-2x1 p-4 text-black  pt-18 navlink"
           }
         >
           Getting started
@@ -76,8 +76,8 @@ const navigate = useNavigate();
           to="/templates"
           className={({ isActive }) =>
             isActive
-              ? "span-2x1 active-tab flex-g pt-4 mt-24 navlink font-bold"
-              : "span-2x1 font-bold text-grey pt-4 mt-24 navlink"
+              ? "active span-2x1 bg-black text-white flex-g pt-18 navlink font-bold p-4"
+              : "font-bold span-2x1 p-4 text-black  pt-18 navlink"
           }
         >
           Templates
