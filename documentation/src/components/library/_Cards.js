@@ -3,10 +3,7 @@ import React from "react";
 function Cards() {
   return (
     <div className="span-12x1">
-      <h1 className="font-96 opacity-50 spacing-sm">Cards</h1>
-      <div className="card">
-        card
-      </div>
+      <h2 className="font-36 c-white bg-grey p-4">Card</h2>{" "}
     </div>
   );
 }

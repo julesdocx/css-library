@@ -7,28 +7,10 @@ function GettingStarted() {
 
   return (
     <div className="grid-10 md-grid mt-60">
-      <div className="mt-24 span-10x1 align-c">
-        <img className="banner" src="./Asset 4.svg" alt="Six hand made steps" />
-      </div>
-      <p className="span-3x1 grid-start-8 subtitle font-24 font-bold text-grey">
-        A handmade website upon completion
-      </p>
-
-      <div className="span-10x1 gs-accordeon mb-36">
-        <div className="md-grid grid-10 step-list text-grey align-c-c">
-          <div className="span-4x1 grid-start-4">
-            <div className="display">
-              <p className="vscode-step">1. Install Visual Studio Code </p>
-            </div>
-            <p className="html-step">2. Create index.html with emmet (!) </p>
-            <p className="styles-step">3. Import &#60;link styles&#62;</p>
-            <p className="live-step">4. Install Live Server </p>
-            <p className="github-step">5. Setup Github </p>
-            <p className="netlify-step">6. Host on Netlify </p>
-          </div>
-        </div>
+      <h2 className="span-12x1 font-36 c-white bg-grey p-6">Getting started in 6 steps</h2>{" "}
+      <div className="span-10x1 gs-accordeon mb-36 mt-12">
         <div className="grid-12 md-grid">
-          <button className={`gs-step hover-mover vscode-step span-2x1`} id="">
+          <button className={`gs-step hover-mover vscode-step span-12x1`} id="">
             <div className="display-f step-title">
               <p className="font-36 mr-12 font-bold">1.</p>
               <img
@@ -36,7 +18,7 @@ function GettingStarted() {
                 src="./Visual_Studio_Code.png"
                 alt="vscodelogo"
               />
-              {/* <p className="font-24">Install Visual Studio Code</p> */}
+              <p className="font-24">Install Visual Studio Code</p>
             </div>
             {/* <div className="description">Your first IDE experience</div> */}
             <svg
@@ -50,7 +32,7 @@ function GettingStarted() {
           </button>
         </div>
         <div className="grid-12 md-grid .html-step">
-          <button className="gs-step span-4x1 html-step" id="html-step">
+          <button className="gs-step span-12x1 html-step" id="html-step">
             <div className="display-f step-title">
               <p className="font-36 mr-12 font-bold .html-step">2.</p>
               <img
@@ -58,7 +40,7 @@ function GettingStarted() {
                 src="./html-bracket.png"
                 alt="vscodelogo"
               />
-              {/* <p className="font-24">Create index.html with emmet (!)</p> */}
+              <p className="font-24">Create index.html with emmet (!)</p>
             </div>
             {/* <div className="description">Your first IDE experience</div> */}
             <svg
@@ -72,7 +54,7 @@ function GettingStarted() {
           </button>
         </div>
         <div className="grid-12 md-grid">
-          <button className="gs-step span-6x1 styles-step" id="styles-step">
+          <button className="gs-step span-12x1 styles-step" id="styles-step">
             <div className="display-f step-title">
               <p className="font-36 mr-12 font-bold">3.</p>
               <img
@@ -80,7 +62,7 @@ function GettingStarted() {
                 src="./css_logo.png"
                 alt="vscodelogo"
               />
-              {/* <p className="font-24">Import &#60;link styles&#62;</p> */}
+              <p className="font-24">Import &#60;link styles&#62;</p>
             </div>
             {/* <div className="description">Your first IDE experience</div> */}
             <svg
@@ -94,7 +76,7 @@ function GettingStarted() {
           </button>
         </div>
         <div className="grid-12 md-grid">
-          <button className="gs-step span-8x1 live-step" id="live-step">
+          <button className="gs-step span-12x1 live-step" id="live-step">
             <div className="display-f step-title">
               <p className="font-36 mr-12 font-bold">4.</p>
               <img
@@ -102,7 +84,7 @@ function GettingStarted() {
                 src="./liveserver_logo.png"
                 alt="vscodelogo"
               />
-              {/* <p className="font-24">Install Live Server</p> */}
+              <p className="font-24">Install Live Server</p>
             </div>
             {/* <div className="description">Your first IDE experience</div> */}
             <svg
@@ -116,7 +98,7 @@ function GettingStarted() {
           </button>
         </div>
         <div className="grid-12 md-grid">
-          <button className="gs-step span-10x1 github-step" id="github-step">
+          <button className="gs-step span-12x1 github-step" id="github-step">
             <div className="display-f step-title">
               <p className="font-36 mr-12 font-bold">5.</p>
               <img
@@ -124,7 +106,7 @@ function GettingStarted() {
                 src="./githublogo.png"
                 alt="vscodelogo"
               />
-              {/* <p className="font-24">Setup Github</p> */}
+              <p className="font-24">Setup Github</p>
             </div>
             {/* <div className="description">Your first IDE experience</div> */}
             <svg
@@ -146,7 +128,7 @@ function GettingStarted() {
                 src="./netlifylogo.svg"
                 alt="vscodelogo"
               />
-              {/* <p className="font-24">Host on Netlify</p> */}
+              <p className="font-24">Host on Netlify</p>
             </div>
             {/* <div className="description">Your first IDE experience</div> */}
             <svg

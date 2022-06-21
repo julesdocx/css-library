@@ -38,6 +38,7 @@
     border: 1px solid;
     margin-top: 6px;
     border-radius: 4px;
+         transition: all ease-in 0.3s
 }
 
 .gs-step:hover > .step-title {
@@ -54,6 +55,7 @@
 }
 
 .description {
+    display: none;
     text-align: left;
 }
 
@@ -100,4 +102,11 @@ button {
 
 .netlify-step {
     color: #25C7B7;
+}
+
+.gs-step:hover {
+     grid-column: auto / span 12;
+}
+.gs-step:hover .description {
+     display: block;
 }

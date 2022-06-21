@@ -41,7 +41,7 @@ const description = useRef();
           <span>first steps</span> of web-developent
         </h1>
         <h1 className="headline span-12x1 text-white mt-18 p-4 pt-36 pb-36 font-bold font-96 bg-black">
-          In case you'v never made a website, go to:{" "}
+          In case you've never made a website, go to:{" "}
           <Link
             className="c-green font-medium hover-underline"
             to="/gettingstarted"
@@ -69,7 +69,7 @@ const description = useRef();
           </a>
         </h1>
         <p className="span-12x1">
-          Made with ❤️ by{" "}
+          👨‍💻 with ❤️ by{" "}
           <a className="c-blue hover-underline" href="http://julesdocx.be">
             Jules Docx
           </a>

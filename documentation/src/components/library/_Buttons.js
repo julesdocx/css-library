@@ -81,60 +81,8 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
           References
         </a>
       </div> */}
-      <h2 className="font-30 c-grey">Button</h2>
-      <div className="p-2 c-grey code-description grid-2 md-grid">
-        <div>
-          A button is an&nbsp;
-          <ul>
-            <li>
-              <span>
-                <code>{`<a></a>*`}</code>
-              </span>
-              ,&nbsp;
-            </li>
-            <li>
-              <span>
-                <code>{`<button></button>`}</code>
-              </span>
-              ,&nbsp;
-            </li>
-            <li>
-              <span>
-                <code>{`<input type="submit"></input>`}</code>
-              </span>
-              &nbsp;or&nbsp;
-            </li>
-            <li>
-              <span>
-                <code>{`<input type="clear"></input>`}</code>
-              </span>
-            </li>
-          </ul>
-          tag with the&nbsp;
-          <span>
-            <code>{`"btn"`}</code>
-          </span>
-          &nbsp;class.
-        </div>
-        <div>
-          The default&nbsp;
-          <span>
-            <code>{`"btn"`}</code>
-          </span>
-          &nbsp;has a font-size of 16px in bold style. The example below also
-          has the&nbsp;
-          <span>
-            <code>"hover-underline"</code>
-          </span>
-          &nbsp;and&nbsp;
-          <span>
-            <code>"text-blue"</code>
-          </span>
-          &nbsp;class
-        </div>
-      </div>
-      <div className="span-2x1 mt-24 code-block">
-        <div className="grid-5 md-grid mb-2 gap-6 tab-group pt-1">
+      <h2 className="font-36 c-white bg-grey p-4">Buttons</h2>
+        <div className="grid-5 md-grid mb-2 gap-6 tab-group pt-1 mt-12">
           <button
             onClick={() => setTabState1(0)}
             className={`tab-item ${
@@ -207,7 +155,6 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
             ? copyText_4
             : ""}
         </SyntaxHighlighter>
-      </div>
       <div
         className="span output-example border-light-grey"
         dangerouslySetInnerHTML={
@@ -222,14 +169,13 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
             : ""
         }
       ></div>
-      <h2 className="font-30 mt-24 c-grey">Button colors &amp; hovers</h2>
-      <div className="span-2x1 code-block">
-        <div className="p-2 c-grey code-description">
-          Buttons can be colored &nbsp;
+      <div className="p-2 c-grey code-description">
+        <div>
+          A button is an&nbsp;
           <ul>
             <li>
               <span>
-                <code>{`<a></a> :)`}</code>
+                <code>{`<a></a>*`}</code>
               </span>
               ,&nbsp;
             </li>
@@ -251,114 +197,151 @@ const copyText_7 = `<button class="btn hover-underline text-red mb-6 mr-6">
               </span>
             </li>
           </ul>
-          &nbsp;tag with the&nbsp;
+          tag with the&nbsp;
           <span>
             <code>{`"btn"`}</code>
           </span>
-          &nbsp;class. The default&nbsp;
-          <span>
-            <code>{`"btn"`}</code>
-          </span>
-          &nbsp;has a font-size of 16px in bold style. This example also has
-          the&nbsp;
-          <span>
-            <code>"hover-underline"</code>
-          </span>
-          &nbsp;and&nbsp;
-          <span>
-            <code>"text-blue"</code>
-          </span>
-          &nbsp;class
+          &nbsp;class.
         </div>
-        <div className="grid-4 md-grid mb-2 gap-6 tab-group pt-1">
-          <button
-            onClick={() => setTabState2(0)}
-            className={`tab-item ${
-              tabState2 === 0 ? "span-2x1 font-bold active-tab" : " span-1x1"
-            } font-14 hover-grey hover-underline`}
-          >
-            Green
-          </button>
-          <button
-            onClick={() => setTabState2(1)}
-            className={`tab-item ${
-              tabState2 === 1 ? "span-2x1 font-bold active-tab" : " span-1x1"
-            } font-14 hover-grey hover-underline`}
-          >
-            Yellow
-          </button>
-          <button
-            onClick={() => setTabState2(2)}
-            className={`tab-item ${
-              tabState2 === 2 ? "span-2x1 font-bold active-tab" : " span-1x1"
-            } font-14 hover-grey hover-underline`}
-          >
-            Red
-          </button>
-        </div>
-
-        <div className="display-f justify-c-r">
-          <div
-            onClick={() => {
-              setIsCopied2(true);
-              navigator.clipboard.writeText(copyText_1);
-              let selection = window.getSelection();
-              let referenceNode = document.getElementsByTagName("pre")[0];
-              selection.selectAllChildren(referenceNode);
-              setTimeout(() => {
-                setIsCopied2(false);
-                selection.removeAllRanges();
-              }, 2500);
-            }}
-            className={`mt-14 copy-btn mr-8 ${
-              isCopied2
-                ? "btn-outlined-green text-green"
-                : "btn-blue bg-blue text-white hover-rounded text-hover-white"
-            }`}
-          >
-            {isCopied2 ? "Copied" : "Copy"}
-          </div>
-        </div>
-        <SyntaxHighlighter
-          className="brd-sm"
-          id="button"
-          language="html"
-          style={vscDarkPlus}
-        >
-          {tabState2 === 0
-            ? copyText_5
-            : tabState2 === 1
-            ? copyText_6
-            : tabState2 === 2
-            ? copyText_7
-            : ""}
-        </SyntaxHighlighter>
       </div>
+
+      <h2 className="font-36 c-white bg-grey p-4">
+        Button colors &amp; hovers
+      </h2>
+      <div className="grid-4 md-grid mb-2 gap-6 tab-group pt-1 mt-12">
+        <button
+          onClick={() => setTabState2(0)}
+          className={`tab-item ${
+            tabState2 === 0 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Green
+        </button>
+        <button
+          onClick={() => setTabState2(1)}
+          className={`tab-item ${
+            tabState2 === 1 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Yellow
+        </button>
+        <button
+          onClick={() => setTabState2(2)}
+          className={`tab-item ${
+            tabState2 === 2 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Red
+        </button>
+      </div>
+
+      <div className="display-f justify-c-r">
         <div
-          className="mt-12 output-example border-light-grey"
-          dangerouslySetInnerHTML={
-            tabState2 === 0
-              ? { __html: copyText_5 }
-              : tabState2 === 1
-              ? { __html: copyText_6 }
-              : tabState2 === 2
-              ? { __html: copyText_7 }
-              : ""
-          }
-        ></div>
-        <div className="content-footer display-f justify-c-e align-i-c">
-            <div className="">
-                <Link
-                to="/documentation/typography"
-                className="btn-underlined text-blue"
-                >
-                    Typography ={'>'}
-                </Link>
-                <p className="font-12 align-r">
-                Guiding you through the Typography system.
-                </p>
-              </div>
+          onClick={() => {
+            setIsCopied2(true);
+            navigator.clipboard.writeText(copyText_1);
+            let selection = window.getSelection();
+            let referenceNode = document.getElementsByTagName("pre")[0];
+            selection.selectAllChildren(referenceNode);
+            setTimeout(() => {
+              setIsCopied2(false);
+              selection.removeAllRanges();
+            }, 2500);
+          }}
+          className={`mt-14 copy-btn mr-8 ${
+            isCopied2
+              ? "btn-outlined-green text-green"
+              : "btn-blue bg-blue text-white hover-rounded text-hover-white"
+          }`}
+        >
+          {isCopied2 ? "Copied" : "Copy"}
         </div>
+      </div>
+      <SyntaxHighlighter
+        className="brd-sm"
+        id="button"
+        language="html"
+        style={vscDarkPlus}
+      >
+        {tabState2 === 0
+          ? copyText_5
+          : tabState2 === 1
+          ? copyText_6
+          : tabState2 === 2
+          ? copyText_7
+          : ""}
+      </SyntaxHighlighter>
+      <div
+        className="mt-12 output-example border-light-grey"
+        dangerouslySetInnerHTML={
+          tabState2 === 0
+            ? { __html: copyText_5 }
+            : tabState2 === 1
+            ? { __html: copyText_6 }
+            : tabState2 === 2
+            ? { __html: copyText_7 }
+            : ""
+        }
+      ></div>
+      <div className="p-2 c-grey code-description">
+        Buttons can be colored &nbsp;
+        <ul>
+          <li>
+            <span>
+              <code>{`<a></a> :)`}</code>
+            </span>
+            ,&nbsp;
+          </li>
+          <li>
+            <span>
+              <code>{`<button></button>`}</code>
+            </span>
+            ,&nbsp;
+          </li>
+          <li>
+            <span>
+              <code>{`<input type="submit"></input>`}</code>
+            </span>
+            &nbsp;or&nbsp;
+          </li>
+          <li>
+            <span>
+              <code>{`<input type="clear"></input>`}</code>
+            </span>
+          </li>
+        </ul>
+        &nbsp;tag with the&nbsp;
+        <span>
+          <code>{`"btn"`}</code>
+        </span>
+        &nbsp;class. The default&nbsp;
+        <span>
+          <code>{`"btn"`}</code>
+        </span>
+        &nbsp;has a font-size of 16px in bold style. This example also has
+        the&nbsp;
+        <span>
+          <code>"hover-underline"</code>
+        </span>
+        &nbsp;and&nbsp;
+        <span>
+          <code>"text-blue"</code>
+        </span>
+        &nbsp;class
+      </div>
+      <div className="content-footer display-f justify-c-e align-i-c">
+        <div className="">
+          <Link
+            to="/documentation/typography"
+            className="btn-underlined text-blue"
+          >
+            Typography ={">"}
+          </Link>
+          <p className="font-12 align-r">
+            Guiding you through the Typography system.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

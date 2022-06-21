@@ -1,10 +1,284 @@
-import React from "react";
+import React, { useState } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Link } from "react-router-dom";
 
 export default function Typography() {
+const [isCopied1, setIsCopied1] = useState(false);
+const [isCopied2, setIsCopied2] = useState(false);
+
+const [tabState1, setTabState1] = useState(0);
+const [tabState2, setTabState2] = useState(0);
+
+const copyText_1 = `<p class="font-12">Hello world in font-size: 1rem * 0.75 / 12px</p>`;
+const copyText_2 = `<p class="font-18">Hello world in font-size: 1rem * 1.125 / 18px</p>`;
+const copyText_3 = `<p class="font-24">Hello world in font-size: 1rem * 1.5 / 24px</p>`;
+const copyText_4 = `<p class="font-48">Hello world in font-size: 1rem * 3 / 48px</p>`;
+
+const copyText_5 = `<p class="font-bold">Hello world in font-weight: 800</p>`;
+const copyText_6 = `<p class="font-thin ">Hello world in font-weight: 100</p>`;
+const copyText_7 = `<p class="style-italic">Hello world in font-style: italic</p>`;
+const copyText_8 = `<p class="text-underline">Hello world with text-decoration: underline</p>`;
+
+
   return (
     <div className="span-12x1">
-      <h2 className="spacing-sm mt-1 font-48 opacity-50">Typography</h2>
-      <div className="span-12x1">
+      <h2 className="font-36 c-white bg-grey p-4">Typography</h2>{" "}
+      <div className="grid-5 md-grid mb-2 gap-6 tab-group pt-1 mt-12">
+        <button
+          onClick={() => setTabState1(0)}
+          className={`tab-item ${
+            tabState1 === 0 ? "span-2x1 font-bold active-tab" : " span-x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Small text
+        </button>
+        <button
+          onClick={() => setTabState1(1)}
+          className={`tab-item ${
+            tabState1 === 1 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Large body
+        </button>
+        <button
+          onClick={() => setTabState1(2)}
+          className={`tab-item ${
+            tabState1 === 2 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Title
+        </button>
+        <button
+          onClick={() => setTabState1(3)}
+          className={`tab-item ${
+            tabState1 === 3 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Headline 1
+        </button>
+      </div>
+      <div className="display-f justify-c-r">
+        <div
+          onClick={() => {
+            setIsCopied1(true);
+            navigator.clipboard.writeText(copyText_1);
+            let selection = window.getSelection();
+            let referenceNode = document.getElementsByTagName("pre")[0];
+            selection.selectAllChildren(referenceNode);
+            setTimeout(() => {
+              setIsCopied1(false);
+              selection.removeAllRanges();
+            }, 2500);
+          }}
+          className={`mt-14 copy-btn mr-8 ${
+            isCopied1
+              ? "btn-outlined-green text-green"
+              : "btn-blue bg-blue text-white hover-rounded text-hover-white"
+          }`}
+        >
+          {isCopied1 ? "Copied" : "Copy"}
+        </div>
+      </div>
+      <SyntaxHighlighter
+        className="brd-sm"
+        id="button"
+        language="html"
+        style={vscDarkPlus}
+      >
+        {tabState1 === 0
+          ? copyText_1
+          : tabState1 === 1
+          ? copyText_2
+          : tabState1 === 2
+          ? copyText_3
+          : tabState1 === 3
+          ? copyText_4
+          : ""}
+      </SyntaxHighlighter>
+      <div
+        className="span output-example border-light-grey"
+        dangerouslySetInnerHTML={
+          tabState1 === 0
+            ? { __html: copyText_1 }
+            : tabState1 === 1
+            ? { __html: copyText_2 }
+            : tabState1 === 2
+            ? { __html: copyText_3 }
+            : tabState1 === 3
+            ? { __html: copyText_4 }
+            : ""
+        }
+      ></div>
+      <div className="p-2 c-grey code-description">
+        <div>
+          Every font-size has it's own class &nbsp;
+          <span>
+            <code>{`.font-12`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`font-16`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-18`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-20`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-24`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-36`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-48`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-60`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-96`}</code>
+          </span>
+          ,&nbsp;
+        </div>
+      </div>
+      <div className="grid-5 md-grid mb-2 gap-6 tab-group pt-1 mt-12">
+        <button
+          onClick={() => setTabState2(0)}
+          className={`tab-item ${
+            tabState2 === 0 ? "span-2x1 font-bold active-tab" : " span-x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Bold
+        </button>
+        <button
+          onClick={() => setTabState2(1)}
+          className={`tab-item ${
+            tabState2 === 1 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+        Thin
+        </button>
+        <button
+          onClick={() => setTabState2(2)}
+          className={`tab-item ${
+            tabState2 === 2 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Italic
+        </button>
+        <button
+          onClick={() => setTabState2(3)}
+          className={`tab-item ${
+            tabState2 === 3 ? "span-2x1 font-bold active-tab" : " span-1x1"
+          } font-14 hover-grey hover-underline`}
+        >
+          Underlined
+        </button>
+      </div>
+      <div className="display-f justify-c-r">
+        <div
+          onClick={() => {
+            setIsCopied2(true);
+            navigator.clipboard.writeText(copyText_1);
+            let selection = window.getSelection();
+            let referenceNode = document.getElementsByTagName("pre")[0];
+            selection.selectAllChildren(referenceNode);
+            setTimeout(() => {
+              setIsCopied2(false);
+              selection.removeAllRanges();
+            }, 2500);
+          }}
+          className={`mt-14 copy-btn mr-8 ${
+            isCopied2
+              ? "btn-outlined-green text-green"
+              : "btn-blue bg-blue text-white hover-rounded text-hover-white"
+          }`}
+        >
+          {isCopied2 ? "Copied" : "Copy"}
+        </div>
+      </div>
+      <SyntaxHighlighter
+        className="brd-sm"
+        id="button"
+        language="html"
+        style={vscDarkPlus}
+      >
+        {tabState2 === 0
+          ? copyText_5
+          : tabState2 === 1
+          ? copyText_6
+          : tabState2 === 2
+          ? copyText_7
+          : tabState2 === 3
+          ? copyText_8
+          : ""}
+      </SyntaxHighlighter>
+      <div
+        className="mt-12 output-example border-light-grey"
+        dangerouslySetInnerHTML={
+          tabState2 === 0
+            ? { __html: copyText_5 }
+            : tabState2 === 1
+            ? { __html: copyText_6 }
+            : tabState2 === 2
+            ? { __html: copyText_7 }
+            : tabState2 === 3
+            ? { __html: copyText_8 }
+            : ""
+        }
+      ></div>
+      <div className="p-2 c-grey code-description">
+        <div>
+          Every font property has it's own class &nbsp;
+          <span>
+            <code>{`.font-thin`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`font-light`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-medium`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-bold`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.font-black`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.style-italic`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.style-oblique`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.text-underline`}</code>
+          </span>
+          ,&nbsp;
+          <span>
+            <code>{`.spacing--025`}</code>
+          </span>
+          ,&nbsp;
+        </div>
+      </div>
+      {/* <div className="span-12x1">
         <div className="grid-2 mt-16">
           <div className="grid-padding grid-border display-f content-sb font-8">
             CAPTION<span className="align-r font-8">8px</span>
@@ -115,7 +389,7 @@ export default function Typography() {
         <div className="grid-padding opacity-100 grid-border font-bold font-body">
           Opacity100 / default
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
